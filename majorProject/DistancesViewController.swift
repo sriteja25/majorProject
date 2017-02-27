@@ -95,11 +95,7 @@ class DistancesViewController: UIViewController,CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let bottomColour = UIColor(red: (9/255), green: (120/255), blue: (163/255), alpha: 1.0)
-        let topColour = UIColor(red: (20/255), green: (164/255), blue: (172/255), alpha: 1.0)
-        let background = CAGradientLayer().viewGradient(topColour:topColour,bottomColour : bottomColour)
-        background.frame = self.view.bounds
-        self.view.layer.insertSublayer(background, at: 0)
+        
         
         almocall(weatherUrl)
         

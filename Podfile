@@ -11,6 +11,8 @@ pod 'Firebase'
 pod 'Firebase/Database'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
+pod 'ProgressHUD'
+pod 'SwiftLocation'
 
 
 

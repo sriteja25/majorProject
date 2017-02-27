@@ -21,13 +21,21 @@ extension CAGradientLayer{
         gradientLayer.locations = gradientLocations as [NSNumber]?
         
         return gradientLayer
+
+    }
+
+    
+}
+
+extension UIButton{
+    
+    func roundedCorners(button:UIButton){
         
+        button.layer.cornerRadius = 3.33
+        button.layer.borderWidth = 0
         
         
     }
-    
-    
-    
     
     
 }
