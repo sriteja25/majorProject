@@ -47,6 +47,16 @@ class RecomendationVc: UIViewController {
     
     @IBOutlet var otherDuration: UILabel!
  
+    @IBOutlet var cab1: UIButton!
+    
+    @IBOutlet var cab2: UIButton!
+    
+    
+    @IBOutlet var nextBestTime: UILabel!
+    
+    
+    @IBOutlet var otherBestLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -221,10 +231,14 @@ class RecomendationVc: UIViewController {
     
     func recomendedPrivate(){
     
-        distance.text = privateDistance
-        duration.text = privateDuration
-        otherDistance.text = publiceDistance
-        otherDuration.text = publicDuration
+        distance.text = "Distance  " + privateDistance
+        duration.text = "Duration  " + privateDuration
+        otherDistance.text = "Distance  " + publiceDistance
+        otherDuration.text = "Duration  " + publicDuration
+        
+        nextBestTime.text = "Nex Available Cab " + " "
+        cab1.isEnabled = true
+        cab2.isEnabled = false
         
         
         recomendation.text = "We recomend Taking a Cab"
@@ -233,12 +247,15 @@ class RecomendationVc: UIViewController {
     }
     func recomendedPublic(){
         
-        otherDistance.text = privateDistance
-        otherDuration.text = privateDuration
-        distance.text = publiceDistance
-        duration.text = publicDuration
+        otherDistance.text = "Distance  " + privateDistance
+        otherDuration.text = "Duration  " + privateDuration
+        distance.text = "Distance  " + publiceDistance
+        duration.text = "Duration  " + publicDuration
         
         recomendation.text = "We recomend Taking a Public Transport"
+        nextBestTime.text = "Nex Available Train is at " + " "
+        cab1.isEnabled = false
+        cab2.isEnabled = true
         
         
     }
