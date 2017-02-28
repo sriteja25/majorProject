@@ -16,6 +16,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>Pods-majorProject.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -33,6 +38,11 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>UberRides.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -46,7 +56,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>0260C73DBED877493DEEA3DE43C63832</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>12DF6260D853FC481F0559D9BE0B28B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1B6EFCEFD2E174AEC4191D536FBFEA61</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>40A16CB0CB5FD49FD533BBC4F0A0C888</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88840241AB3294D8FBC1FC5F06D856A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -76,7 +106,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B43918AB915242B851ABEFB5D70BE0AD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C2896E1AB1B9588998C7FE78B70D95EC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F39A3495FD4C7F79F33E296D4ADC4D62</key>
 		<dict>
 			<key>primary</key>
 			<true/>

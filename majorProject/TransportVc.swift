@@ -32,8 +32,7 @@ class TransportVc: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        go.roundedCorners(button:go)
-        get.roundedCorners(button:get)
+       
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()

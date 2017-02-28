@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import ProgressHUD
+import UberRides
 
 
 class RecomendationVc: UIViewController {
@@ -61,6 +62,8 @@ class RecomendationVc: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ProgressHUD.show("Recomendation")
+        
         peakTimeCheck()
         
         retreiveValues()
@@ -70,7 +73,8 @@ class RecomendationVc: UIViewController {
         privateTransport()
         transit()
         
-       
+        cab1.isHidden = true
+        cab2.isHidden = true
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -86,9 +90,8 @@ class RecomendationVc: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        ProgressHUD.show("Recomendation")
-         recomendationForTransport()
-        ProgressHUD.dismiss()
+        
+        
     }
     
 
@@ -96,10 +99,10 @@ class RecomendationVc: UIViewController {
     
         let defaults = UserDefaults.standard
         
-        var origin = defaults.object(forKey: "origin") as? String ?? ""
-        var destination = defaults.object(forKey: "destination") as? String ?? ""
-        var cheap = defaults.object(forKey: "cheapest") as? Bool ?? false
-        var fast = defaults.object(forKey: "fastest") as? Bool ?? false
+        let origin = defaults.object(forKey: "origin") as? String ?? ""
+        let destination = defaults.object(forKey: "destination") as? String ?? ""
+        let cheap = defaults.object(forKey: "cheapest") as? Bool ?? false
+        let fast = defaults.object(forKey: "fastest") as? Bool ?? false
         
         self.origin = origin
         self.destination = destination
@@ -133,7 +136,7 @@ class RecomendationVc: UIViewController {
                         var humidity = currently["humidity"] as! Float
                         self.humidity = humidity
                         
-                        temperature = self.convertToCelsius(fahrenheit: temperature)
+                        //temperature = self.convertToCelsius(fahrenheit: temperature)
                         temperature = round(temperature*10)/10
                         self.currentWeather = temperature
                         let icon = currently["icon"] as! String
@@ -185,7 +188,10 @@ class RecomendationVc: UIViewController {
                     print(self.publicDuration)
                     print(self.publiceDistance)
                     
+                    self.recomendationForTransport()
+                    ProgressHUD.dismiss()
                 }
+                
         }
     }
     
@@ -218,14 +224,18 @@ class RecomendationVc: UIViewController {
                 
                 print(self.privateDuration)
                 print(self.privateDistance)
+                
+                
 
                 }
+        
+        
         }
     
    
 
 
-    func convertToCelsius(fahrenheit: Float) -> Float {
+    func convertToCelsius(_ fahrenheit: Float) -> Float {
         return Float(5.0 / 9.0 * (Double(fahrenheit) - 32.0))
     }
     
@@ -236,9 +246,10 @@ class RecomendationVc: UIViewController {
         otherDistance.text = "Distance  " + publiceDistance
         otherDuration.text = "Duration  " + publicDuration
         
-        nextBestTime.text = "Nex Available Cab " + " "
-        cab1.isEnabled = true
-        cab2.isEnabled = false
+        nextBestTime.text = "Next Available Cab " + " "
+        otherBestLabel.text = "Next Train is at" + ""
+        cab1.isHidden = false
+        cab2.isHidden = true
         
         
         recomendation.text = "We recomend Taking a Cab"
@@ -254,8 +265,9 @@ class RecomendationVc: UIViewController {
         
         recomendation.text = "We recomend Taking a Public Transport"
         nextBestTime.text = "Nex Available Train is at " + " "
-        cab1.isEnabled = false
-        cab2.isEnabled = true
+        otherBestLabel.text = "Next Available Cab " + ""
+        cab1.isHidden = true
+        cab2.isHidden = false
         
         
     }

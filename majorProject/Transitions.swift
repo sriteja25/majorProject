@@ -11,7 +11,7 @@ import Foundation
 extension CAGradientLayer{
     
     
-    func viewGradient(topColour:UIColor,bottomColour : UIColor) -> CAGradientLayer{
+    func viewGradient(_ topColour:UIColor,bottomColour : UIColor) -> CAGradientLayer{
         
         let gradientColor: [CGColor] = [topColour.cgColor, bottomColour.cgColor]
         let gradientLocations: [Float] = [0.0/1.0]
@@ -29,7 +29,7 @@ extension CAGradientLayer{
 
 extension UIButton{
     
-    func roundedCorners(button:UIButton){
+    func roundedCorners(_ button:UIButton){
         
         button.layer.cornerRadius = 3.33
         button.layer.borderWidth = 0

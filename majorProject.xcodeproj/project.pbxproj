@@ -401,18 +401,18 @@
 				TargetAttributes = {
 					CB3ED4AC1DAB8EB600F616A3 = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					CB3ED4C01DAB8EB600F616A3 = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = CB3ED4AC1DAB8EB600F616A3;
 					};
 					CB3ED4CB1DAB8EB600F616A3 = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = CB3ED4AC1DAB8EB600F616A3;
 					};
