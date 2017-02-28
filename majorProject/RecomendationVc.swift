@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import ProgressHUD
 import UberRides
+import CoreLocation
 
 
 class RecomendationVc: UIViewController {
@@ -42,15 +43,10 @@ class RecomendationVc: UIViewController {
     
     @IBOutlet var duration: UILabel!
     
-    @IBOutlet var nextTrain: UILabel!
-    
     @IBOutlet var otherDistance: UILabel!
     
     @IBOutlet var otherDuration: UILabel!
- 
-    @IBOutlet var cab1: UIButton!
-    
-    @IBOutlet var cab2: UIButton!
+
     
     
     @IBOutlet var nextBestTime: UILabel!
@@ -58,6 +54,14 @@ class RecomendationVc: UIViewController {
     
     @IBOutlet var otherBestLabel: UILabel!
     
+    
+    @IBOutlet var view1: UIView!
+    
+    @IBOutlet var view2: UIView!
+    
+    let cab1 = RideRequestButton()
+    let cab2 = RideRequestButton()
+    let ridesClient = RidesClient()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,8 +77,14 @@ class RecomendationVc: UIViewController {
         privateTransport()
         transit()
         
-        cab1.isHidden = true
-        cab2.isHidden = true
+        
+        
+        //cab1.isHidden = true
+        //cab2.isHidden = true
+        
+        
+        setup()
+        
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -92,6 +102,52 @@ class RecomendationVc: UIViewController {
         
         
         
+    }
+    
+    func setup(){
+        
+        let pickupLocation = CLLocation(latitude: 37.775159, longitude: -122.417907)
+        let dropoffLocation = CLLocation(latitude: 37.6213129, longitude: -122.3789554)
+        
+        var builder = RideParametersBuilder()
+            .setPickupLocation(pickupLocation).setDropoffLocation(dropoffLocation,
+                                nickname: "San Francisco International Airport")
+        
+        ridesClient.fetchCheapestProduct(pickupLocation: pickupLocation, completion: {
+            product, response in
+            if let productID = product?.productID { //check if the productID exists
+               
+                builder = builder.setProductID(productID)
+                self.cab1.rideParameters = builder.build()
+                self.cab2.rideParameters = builder.build()
+                
+                // show estimates in the button
+                self.cab1.loadRideInformation()
+                self.cab2.loadRideInformation()
+            }
+        })
+        
+        
+    
+        ridesClient.fetchPriceEstimates(pickupLocation: pickupLocation, dropoffLocation: dropoffLocation) { (product, response) in
+            
+            print(product)
+        }
+        
+        
+        
+        
+        cab1.rideParameters  = builder.build()
+        cab2.rideParameters  = builder.build()
+        
+        cab1.colorStyle = .black
+        cab2.colorStyle = .black
+        
+        view1.addSubview(cab1)
+        view2.addSubview(cab2)
+        
+        
+    
     }
     
 

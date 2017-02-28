@@ -68,5 +68,21 @@
 	<string></string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string></string>
+    <key>UberClientID</key>
+    <string>OHN_l_I_rxQWf7o-hkkjLCB_m03lNHa9</string>
+        <key>UberDisplayName</key>
+        <string>Perfect Ride</string>
+            <key>UberCallbackURIs</key>
+            <array>
+                <dict>
+                    <key>UberCallbackURIType</key>
+                    <string>General</string>
+                    <key>URIString</key>
+                    <string>http://localhost/</string>
+                    </dict>
+                </array>
+    
+    <key>UberServerToken</key>
+    <string>iw-FK7q_jSYofMHI2V8h9ExbsGbddFdCUXho7hwe</string>
 </dict>
 </plist>

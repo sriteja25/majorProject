@@ -32,7 +32,7 @@ class TransportVc: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+       self.hideKeyboardWhenTappedAround()
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()

@@ -33,6 +33,7 @@
 		CBD79C871DC1A6C700F5D927 /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD79C811DC1A6C700F5D927 /* GFGeoHashQuery.m */; };
 		CBD79C881DC1A6C700F5D927 /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD79C831DC1A6C700F5D927 /* GFQuery.m */; };
 		CBD79C8B1DC2912E00F5D927 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD79C8A1DC2912E00F5D927 /* MapsViewController.swift */; };
+		CBF088FA1E6516EF006EF66C /* extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF088F91E6516EF006EF66C /* extenstions.swift */; };
 		CBF0A8281DC856B700315E00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF0A8231DC856B700315E00 /* Constants.swift */; };
 		CBF0A8291DC856B700315E00 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF0A8241DC856B700315E00 /* CurrentWeather.swift */; };
 		CBF0A82A1DC856B700315E00 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF0A8251DC856B700315E00 /* Forecast.swift */; };
@@ -113,6 +114,7 @@
 		CBD79C831DC1A6C700F5D927 /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
 		CBD79C891DC1A83000F5D927 /* majorProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "majorProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		CBD79C8A1DC2912E00F5D927 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		CBF088F91E6516EF006EF66C /* extenstions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extenstions.swift; sourceTree = "<group>"; };
 		CBF0A8231DC856B700315E00 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CBF0A8241DC856B700315E00 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		CBF0A8251DC856B700315E00 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			children = (
 				CB4728A81E5B017400CC2FEF /* Transitions.swift */,
 				CBB134531E5BA74800D5196D /* WeatherTableViewCell.swift */,
+				CBF088F91E6516EF006EF66C /* extenstions.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -401,17 +404,20 @@
 				TargetAttributes = {
 					CB3ED4AC1DAB8EB600F616A3 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5L5FPMLK7F;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					CB3ED4C01DAB8EB600F616A3 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5L5FPMLK7F;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = CB3ED4AC1DAB8EB600F616A3;
 					};
 					CB3ED4CB1DAB8EB600F616A3 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5L5FPMLK7F;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = CB3ED4AC1DAB8EB600F616A3;
@@ -545,6 +551,7 @@
 				CBF0A82A1DC856B700315E00 /* Forecast.swift in Sources */,
 				CBD79C871DC1A6C700F5D927 /* GFGeoHashQuery.m in Sources */,
 				CBF0A82B1DC856B700315E00 /* Location.swift in Sources */,
+				CBF088FA1E6516EF006EF66C /* extenstions.swift in Sources */,
 				CBD79C841DC1A6C700F5D927 /* GeoFire.m in Sources */,
 				CB4728A91E5B017400CC2FEF /* Transitions.swift in Sources */,
 				CBF0A8281DC856B700315E00 /* Constants.swift in Sources */,
@@ -628,9 +635,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: sriteja chhilakamarri (A5A77U4D5G)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 5L5FPMLK7F;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -678,9 +687,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: sriteja chhilakamarri (A5A77U4D5G)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 5L5FPMLK7F;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -792,7 +803,7 @@
 				CB3ED4D41DAB8EB600F616A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		CB3ED4D51DAB8EB600F616A3 /* Build configuration list for PBXNativeTarget "majorProject" */ = {
 			isa = XCConfigurationList;
@@ -801,7 +812,7 @@
 				CB3ED4D71DAB8EB600F616A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		CB3ED4D81DAB8EB600F616A3 /* Build configuration list for PBXNativeTarget "majorProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -810,7 +821,7 @@
 				CB3ED4DA1DAB8EB600F616A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		CB3ED4DB1DAB8EB600F616A3 /* Build configuration list for PBXNativeTarget "majorProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -819,7 +830,7 @@
 				CB3ED4DD1DAB8EB600F616A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
