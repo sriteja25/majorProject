@@ -192,7 +192,7 @@ class RecomendationVc: UIViewController {
                         var humidity = currently["humidity"] as! Float
                         self.humidity = humidity
                         
-                        //temperature = self.convertToCelsius(fahrenheit: temperature)
+                        temperature = self.convertToCelsius(temperature)
                         temperature = round(temperature*10)/10
                         self.currentWeather = temperature
                         let icon = currently["icon"] as! String
@@ -303,7 +303,7 @@ class RecomendationVc: UIViewController {
         otherDuration.text = "Duration  " + publicDuration
         
         nextBestTime.text = "Next Available Cab " + " "
-        otherBestLabel.text = "Next Train is at" + ""
+        otherBestLabel.text = "Next Bus is at" + ""
         cab1.isHidden = false
         cab2.isHidden = true
         
@@ -320,7 +320,7 @@ class RecomendationVc: UIViewController {
         duration.text = "Duration  " + publicDuration
         
         recomendation.text = "We recomend Taking a Public Transport"
-        nextBestTime.text = "Nex Available Train is at " + " "
+        nextBestTime.text = "Nex Available Bus Train is at " + " "
         otherBestLabel.text = "Next Available Cab " + ""
         cab1.isHidden = true
         cab2.isHidden = false

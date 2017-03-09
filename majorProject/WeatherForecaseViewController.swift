@@ -32,6 +32,10 @@ class WeatherForecaseViewController: UIViewController,UITableViewDelegate,UITabl
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
+        tableView.tableFooterView = UIView()
+        tableView.backgroundColor = UIColor.clear
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,10 +68,11 @@ class WeatherForecaseViewController: UIViewController,UITableViewDelegate,UITabl
                                 // myTime = myTime.remove(at: 5)
                                 let icon = items["icon"] as! String
                                 let temperature = items["temperature"] as! Float
+                                let tempCel = self.convertToCelsius(temperature)
                                 
                                 self.time.append(myTime)
                                 self.icon.append(icon)
-                                self.temperature.append(temperature)
+                                self.temperature.append(tempCel)
 
                             }
                         
@@ -102,10 +107,15 @@ class WeatherForecaseViewController: UIViewController,UITableViewDelegate,UITabl
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! WeatherTableViewCell
         
         cell.iconLabel.text = icon[indexPath.row]
-        cell.tempLabel.text = "\(temperature[indexPath.row])"
+        cell.tempLabel.text = "\(temperature[indexPath.row])" + "ºC"
         cell.timeLabel.text = "\((time[indexPath.row]))"
+        cell.backgroundColor = UIColor.clear
         
         return cell
+    }
+    
+    func convertToCelsius(_ fahrenheit: Float) -> Float {
+        return Float(5.0 / 9.0 * (Double(fahrenheit) - 48.0))
     }
     
     
