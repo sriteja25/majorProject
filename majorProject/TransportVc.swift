@@ -38,6 +38,16 @@ class TransportVc: UIViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
 
         // Do any additional setup after loading the view.
+        
+        let defaults = UserDefaults.standard
+        
+        let source = defaults.object(forKey: "source") as? String ?? "Potheri"
+        let destination = defaults.object(forKey: "destination") as? String ?? "Egmore"
+        
+        startPlace.text = source
+        endPlace.text = destination
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

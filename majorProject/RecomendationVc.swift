@@ -29,6 +29,7 @@ class RecomendationVc: UIViewController {
     var privateDuration:String = ""
     var publiceDistance:String = ""
     var publicDuration:String = ""
+    var pubDeptTime:String = ""
 
     
     
@@ -226,8 +227,11 @@ class RecomendationVc: UIViewController {
                     let b = a.firstObject as! [String:AnyObject]
                     let c  = b["legs"] as! NSArray
                     let k =  c.firstObject as! [String:AnyObject]
+                    let deptTime = k["departure_time"]?["text"] as! String
                     let textDistance =  k["distance"]?["text"] as! String
                     //let valueDistance = k["distance"]?["value"] as! Float
+                    
+                    self.pubDeptTime = deptTime
                     
                     let z = c.firstObject as! [String:AnyObject]
                     
@@ -303,7 +307,7 @@ class RecomendationVc: UIViewController {
         otherDuration.text = "Duration  " + publicDuration
         
         nextBestTime.text = "Next Available Cab " + " "
-        otherBestLabel.text = "Next Bus is at" + ""
+        otherBestLabel.text = "Next Bus is at    " + pubDeptTime
         cab1.isHidden = false
         cab2.isHidden = true
         
@@ -320,7 +324,7 @@ class RecomendationVc: UIViewController {
         duration.text = "Duration  " + publicDuration
         
         recomendation.text = "We recomend Taking a Public Transport"
-        nextBestTime.text = "Nex Available Bus Train is at " + " "
+        nextBestTime.text = "Nex Available Bus is at     " + pubDeptTime
         otherBestLabel.text = "Next Available Cab " + ""
         cab1.isHidden = true
         cab2.isHidden = false

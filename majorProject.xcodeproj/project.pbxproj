@@ -17,8 +17,8 @@
 		CB3ED4E11DAD112D00F616A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB3ED4E01DAD112D00F616A3 /* GoogleService-Info.plist */; };
 		CB4728A91E5B017400CC2FEF /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4728A81E5B017400CC2FEF /* Transitions.swift */; };
 		CB4728AC1E5B034400CC2FEF /* WeatherForecaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4728AB1E5B034400CC2FEF /* WeatherForecaseViewController.swift */; };
-		CBA95F341E717D0600B78ABD /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA95F321E717D0600B78ABD /* LocationSearchTable.swift */; };
-		CBA95F351E717D0600B78ABD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA95F331E717D0600B78ABD /* ViewController.swift */; };
+		CBA95F3A1E71857500B78ABD /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA95F381E71857500B78ABD /* LocationSearchTable.swift */; };
+		CBA95F3B1E71857500B78ABD /* SourceVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA95F391E71857500B78ABD /* SourceVc.swift */; };
 		CBB134541E5BA74800D5196D /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB134531E5BA74800D5196D /* WeatherTableViewCell.swift */; };
 		CBB134561E5BADB300D5196D /* HomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB134551E5BADB300D5196D /* HomeVc.swift */; };
 		CBB1345A1E5BB40600D5196D /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB134591E5BB40600D5196D /* ForecastViewController.swift */; };
@@ -88,8 +88,8 @@
 		CB3ED4E01DAD112D00F616A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB4728A81E5B017400CC2FEF /* Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
 		CB4728AB1E5B034400CC2FEF /* WeatherForecaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherForecaseViewController.swift; sourceTree = "<group>"; };
-		CBA95F321E717D0600B78ABD /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
-		CBA95F331E717D0600B78ABD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CBA95F381E71857500B78ABD /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		CBA95F391E71857500B78ABD /* SourceVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceVc.swift; sourceTree = "<group>"; };
 		CBB134531E5BA74800D5196D /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		CBB134551E5BADB300D5196D /* HomeVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVc.swift; sourceTree = "<group>"; };
 		CBB134591E5BB40600D5196D /* ForecastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
@@ -253,8 +253,8 @@
 		CB4728AA1E5B020E00CC2FEF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CBA95F321E717D0600B78ABD /* LocationSearchTable.swift */,
-				CBA95F331E717D0600B78ABD /* ViewController.swift */,
+				CBA95F381E71857500B78ABD /* LocationSearchTable.swift */,
+				CBA95F391E71857500B78ABD /* SourceVc.swift */,
 				CBD78ED51DDE163100784FA6 /* DistancesViewController.swift */,
 				CBD79C891DC1A83000F5D927 /* majorProject-Bridging-Header.h */,
 				CBFA46741DB467F10026503E /* MapViewController.swift */,
@@ -546,16 +546,16 @@
 				CB4728AC1E5B034400CC2FEF /* WeatherForecaseViewController.swift in Sources */,
 				CBBE164D1DD813B6003A9320 /* DistanceViewController.swift in Sources */,
 				CBD78ED61DDE163100784FA6 /* DistancesViewController.swift in Sources */,
-				CBA95F351E717D0600B78ABD /* ViewController.swift in Sources */,
 				CBF0A82C1DC856B700315E00 /* WeatherVC.swift in Sources */,
 				CBF0A82E1DC856D200315E00 /* WeatherCell.swift in Sources */,
+				CBA95F3B1E71857500B78ABD /* SourceVc.swift in Sources */,
 				CBF0A8291DC856B700315E00 /* CurrentWeather.swift in Sources */,
 				CBD79C851DC1A6C700F5D927 /* GFBase32Utils.m in Sources */,
 				CBF0A82A1DC856B700315E00 /* Forecast.swift in Sources */,
 				CBD79C871DC1A6C700F5D927 /* GFGeoHashQuery.m in Sources */,
 				CBF0A82B1DC856B700315E00 /* Location.swift in Sources */,
 				CBF088FA1E6516EF006EF66C /* extenstions.swift in Sources */,
-				CBA95F341E717D0600B78ABD /* LocationSearchTable.swift in Sources */,
+				CBA95F3A1E71857500B78ABD /* LocationSearchTable.swift in Sources */,
 				CBD79C841DC1A6C700F5D927 /* GeoFire.m in Sources */,
 				CB4728A91E5B017400CC2FEF /* Transitions.swift in Sources */,
 				CBF0A8281DC856B700315E00 /* Constants.swift in Sources */,

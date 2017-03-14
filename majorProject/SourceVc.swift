@@ -20,9 +20,20 @@ class ViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     
+    var mySelectedPlace:String = ""
+    var searchBar = UISearchBar()
+    
+    
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBAction func button3(_ sender: AnyObject) {
+        getDirections()
+    }
     
+    
+    @IBOutlet var nextButton: UIBarButtonItem!
+    
+    @IBOutlet var doneButton: UIBarButtonItem!
     
     
     override func viewDidLoad() {
@@ -35,7 +46,7 @@ class ViewController: UIViewController {
         let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
         resultSearchController = UISearchController(searchResultsController: locationSearchTable)
         resultSearchController.searchResultsUpdater = locationSearchTable
-        let searchBar = resultSearchController!.searchBar
+        searchBar = resultSearchController!.searchBar
         searchBar.sizeToFit()
         searchBar.placeholder = "Search for places"
         navigationItem.titleView = resultSearchController?.searchBar
@@ -45,6 +56,10 @@ class ViewController: UIViewController {
         locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
         
+        
+        
+        
+        
     }
     
     func getDirections(){
@@ -53,6 +68,40 @@ class ViewController: UIViewController {
         let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
         mapItem.openInMaps(launchOptions: launchOptions)
     }
+    
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        
+        let defaults = UserDefaults.standard
+        
+        let source = defaults.object(forKey: "source") as? String ?? "Potheri"
+        
+        mySelectedPlace = searchBar.text!
+        
+        defaults.set(mySelectedPlace, forKey: "source")
+        
+        defaults.synchronize()
+        
+        performSegue(withIdentifier: "toDestination", sender: nil)
+        
+        
+    }
+    
+    @IBAction func doneButtonPressed(_ sender: Any) {
+        
+        let defaults = UserDefaults.standard
+        
+        let destination = defaults.object(forKey: "destination") as? String ?? "Egmore"
+        
+        mySelectedPlace = searchBar.text!
+        
+        defaults.set(mySelectedPlace, forKey: "destination")
+        defaults.synchronize()
+        
+        performSegue(withIdentifier: "toRecomendation", sender: nil)
+        
+    }
+    
+    
 }
 
 extension ViewController : CLLocationManagerDelegate {
@@ -120,4 +169,7 @@ extension ViewController : MKMapViewDelegate {
         
         return pinView
     }
+    
+    
+    
 }
