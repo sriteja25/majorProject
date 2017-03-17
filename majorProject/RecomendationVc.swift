@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 import ProgressHUD
-import UberRides
+//import UberRides
 import CoreLocation
 
 
@@ -59,10 +59,10 @@ class RecomendationVc: UIViewController {
     @IBOutlet var view1: UIView!
     
     @IBOutlet var view2: UIView!
-    
+    /*
     let cab1 = RideRequestButton()
     let cab2 = RideRequestButton()
-    let ridesClient = RidesClient()
+    let ridesClient = RidesClient()*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +84,7 @@ class RecomendationVc: UIViewController {
         //cab2.isHidden = true
         
         
-        setup()
+       // setup()
         
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -105,7 +105,7 @@ class RecomendationVc: UIViewController {
         
     }
     
-    func setup(){
+    /*func setup(){
         
         let pickupLocation = CLLocation(latitude: 37.775159, longitude: -122.417907)
         let dropoffLocation = CLLocation(latitude: 37.6213129, longitude: -122.3789554)
@@ -149,7 +149,7 @@ class RecomendationVc: UIViewController {
         
         
     
-    }
+    }*/
     
 
     func retreiveValues(){
@@ -308,8 +308,8 @@ class RecomendationVc: UIViewController {
         
         nextBestTime.text = "Next Available Cab " + " "
         otherBestLabel.text = "Next Bus is at    " + pubDeptTime
-        cab1.isHidden = false
-        cab2.isHidden = true
+        //cab1.isHidden = false
+        //cab2.isHidden = true
         
         
         recomendation.text = "We recomend Taking a Cab"
@@ -326,8 +326,8 @@ class RecomendationVc: UIViewController {
         recomendation.text = "We recomend Taking a Public Transport"
         nextBestTime.text = "Nex Available Bus is at     " + pubDeptTime
         otherBestLabel.text = "Next Available Cab " + ""
-        cab1.isHidden = true
-        cab2.isHidden = false
+        //cab1.isHidden = true
+        //cab2.isHidden = false
         
         
     }

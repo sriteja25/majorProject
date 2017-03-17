@@ -81,7 +81,7 @@ class ViewController: UIViewController {
         
         defaults.synchronize()
         
-        performSegue(withIdentifier: "toDestination", sender: nil)
+        performSegue(withIdentifier: "myLocationTo", sender: nil)
         
         
     }
@@ -97,7 +97,7 @@ class ViewController: UIViewController {
         defaults.set(mySelectedPlace, forKey: "destination")
         defaults.synchronize()
         
-        performSegue(withIdentifier: "toRecomendation", sender: nil)
+        performSegue(withIdentifier: "myDestinationTo", sender: nil)
         
     }
     

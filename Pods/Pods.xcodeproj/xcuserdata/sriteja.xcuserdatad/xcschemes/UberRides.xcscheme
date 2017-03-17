@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1B6EFCEFD2E174AEC4191D536FBFEA61"
+               BlueprintIdentifier = "5E560AF17CD940C7B88E3D4B99074E38"
                BuildableName = "UberRides.framework"
                BlueprintName = "UberRides"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1B6EFCEFD2E174AEC4191D536FBFEA61"
+            BlueprintIdentifier = "5E560AF17CD940C7B88E3D4B99074E38"
             BuildableName = "UberRides.framework"
             BlueprintName = "UberRides"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1B6EFCEFD2E174AEC4191D536FBFEA61"
-            BuildableName = "UberRides.framework"
-            BlueprintName = "UberRides"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

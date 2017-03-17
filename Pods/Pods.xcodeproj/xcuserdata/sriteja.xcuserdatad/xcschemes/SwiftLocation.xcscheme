@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C2896E1AB1B9588998C7FE78B70D95EC"
+               BlueprintIdentifier = "F837E370E2A639D28270182ABDA6AD10"
                BuildableName = "SwiftLocation.framework"
                BlueprintName = "SwiftLocation"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C2896E1AB1B9588998C7FE78B70D95EC"
+            BlueprintIdentifier = "F837E370E2A639D28270182ABDA6AD10"
             BuildableName = "SwiftLocation.framework"
             BlueprintName = "SwiftLocation"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C2896E1AB1B9588998C7FE78B70D95EC"
-            BuildableName = "SwiftLocation.framework"
-            BlueprintName = "SwiftLocation"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

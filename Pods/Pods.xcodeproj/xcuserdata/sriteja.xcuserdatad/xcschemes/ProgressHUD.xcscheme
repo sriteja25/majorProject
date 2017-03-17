@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "017F67EF0F5493B47437C96ADBEC7DD6"
+               BlueprintIdentifier = "A4EFF33F9C1FF418B3D70AADE15D3DC5"
                BuildableName = "ProgressHUD.framework"
                BlueprintName = "ProgressHUD"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "017F67EF0F5493B47437C96ADBEC7DD6"
+            BlueprintIdentifier = "A4EFF33F9C1FF418B3D70AADE15D3DC5"
             BuildableName = "ProgressHUD.framework"
             BlueprintName = "ProgressHUD"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "017F67EF0F5493B47437C96ADBEC7DD6"
-            BuildableName = "ProgressHUD.framework"
-            BlueprintName = "ProgressHUD"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

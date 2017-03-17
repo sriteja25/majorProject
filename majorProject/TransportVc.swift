@@ -41,8 +41,8 @@ class TransportVc: UIViewController {
         
         let defaults = UserDefaults.standard
         
-        let source = defaults.object(forKey: "source") as? String ?? "Potheri"
-        let destination = defaults.object(forKey: "destination") as? String ?? "Egmore"
+        let source = defaults.object(forKey: "source") as? String ?? ""
+        let destination = defaults.object(forKey: "destination") as? String ?? ""
         
         startPlace.text = source
         endPlace.text = destination
@@ -111,6 +111,18 @@ class TransportVc: UIViewController {
             cheapestBool = true
             
         }
+    }
+    
+    @IBAction func myLocation(_ sender: Any) {
+        
+        performSegue(withIdentifier: "myLocation", sender: nil)
+        
+    }
+    
+    @IBAction func myDestination(_ sender: Any) {
+        
+        performSegue(withIdentifier: "myDestination", sender: nil)
+        
     }
 
     

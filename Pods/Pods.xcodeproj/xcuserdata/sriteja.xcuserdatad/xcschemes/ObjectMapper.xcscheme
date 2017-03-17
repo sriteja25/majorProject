@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "40A16CB0CB5FD49FD533BBC4F0A0C888"
+               BlueprintIdentifier = "B43918AB915242B851ABEFB5D70BE0AD"
                BuildableName = "ObjectMapper.framework"
                BlueprintName = "ObjectMapper"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "40A16CB0CB5FD49FD533BBC4F0A0C888"
+            BlueprintIdentifier = "B43918AB915242B851ABEFB5D70BE0AD"
             BuildableName = "ObjectMapper.framework"
             BlueprintName = "ObjectMapper"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "40A16CB0CB5FD49FD533BBC4F0A0C888"
-            BuildableName = "ObjectMapper.framework"
-            BlueprintName = "ObjectMapper"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

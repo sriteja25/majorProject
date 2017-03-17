@@ -24,6 +24,10 @@ class HomeVc: UIViewController {
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "source")
+        defaults.removeObject(forKey: "destination")
 
         // Do any additional setup after loading the view.
     }
