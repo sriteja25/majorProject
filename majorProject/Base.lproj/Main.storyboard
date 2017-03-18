@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fab-57-qat">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1025,7 +1025,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcN-NB-hRv">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EKh-Y6-htH">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EKh-Y6-htH">
                                                 <rect key="frame" x="36" y="218" width="304" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="6Qj-43-qpL"/>
@@ -1034,7 +1034,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oWZ-97-iDe">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oWZ-97-iDe">
                                                 <rect key="frame" x="36" y="315" width="304" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="lsJ-fw-wCi"/>
@@ -1161,7 +1161,7 @@
                         <outlet property="pwdEntered" destination="oWZ-97-iDe" id="EEb-dB-Fss"/>
                         <outlet property="scrollView" destination="2Hf-tO-8Vg" id="8Dh-uN-ado"/>
                         <outlet property="signInButton" destination="043-y5-90D" id="S9k-Iy-F6X"/>
-                        <segue destination="Ll8-am-uAX" kind="show" identifier="loggedIn" id="C2h-h0-XoY"/>
+                        <segue destination="7y7-Y3-AXW" kind="show" identifier="loggedIn" id="Zhm-af-Ncq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PKe-R6-P7n" sceneMemberID="firstResponder"/>
@@ -1174,7 +1174,6 @@
         <image name="logo.png" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="C2h-h0-XoY"/>
         <segue reference="px8-8n-yK3"/>
     </inferredMetricsTieBreakers>
 </document>

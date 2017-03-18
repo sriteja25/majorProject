@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import GoogleSignIn
+import Firebase
 
 
 @UIApplicationMain
@@ -27,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey("AIzaSyCrQ0XZ3rW_pu0HeM7beSPIzBx9cN1BiIs")
         
     //    GMSPlacesClient.provideAPIKey("AIzaSyCrQ0XZ3rW_pu0HeM7beSPIzBx9cN1BiIs")
+        
+        FIRApp.configure()
         
         return true
     }

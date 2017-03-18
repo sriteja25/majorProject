@@ -115,7 +115,7 @@ class SignInViewController: UIViewController/*,GIDSignInDelegate,GIDSignInUIDele
         //let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
         let keychainResult = KeychainWrapper.defaultKeychainWrapper.set(id, forKey: "keychain")
         print("JESS: Data saved to keychain \(keychainResult)")
-        performSegue(withIdentifier: "signedIn", sender: nil)
+        performSegue(withIdentifier: "loggedIn", sender: nil)
     }
     
 }
