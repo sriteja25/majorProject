@@ -1,50 +1,10 @@
 PODS:
   - Alamofire (4.3.0)
-  - AWSAutoScaling (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSCloudWatch (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSCognito (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSCognitoIdentityProvider (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSCore (2.5.2)
-  - AWSDynamoDB (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSEC2 (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSElasticLoadBalancing (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSIoT (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSKinesis (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSLambda (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSLex (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSMachineLearning (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSMobileAnalytics (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSPinpoint (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSPolly (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSRekognition (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSS3 (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSSES (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSSimpleDB (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSSNS (2.5.2):
-    - AWSCore (= 2.5.2)
-  - AWSSQS (2.5.2):
-    - AWSCore (= 2.5.2)
   - Firebase (3.12.0):
     - Firebase/Core (= 3.12.0)
+  - Firebase/Auth (3.12.0):
+    - Firebase/Core
+    - FirebaseAuth (= 3.1.0)
   - Firebase/Core (3.12.0):
     - FirebaseAnalytics (= 3.6.0)
     - FirebaseCore (= 3.4.7)
@@ -57,6 +17,10 @@ PODS:
     - GoogleInterchangeUtilities (~> 1.2)
     - GoogleSymbolUtilities (~> 1.1)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseAuth (3.1.0):
+    - FirebaseAnalytics (~> 3.6)
+    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
+    - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseCore (3.4.7):
     - GoogleInterchangeUtilities (~> 1.2)
     - GoogleSymbolUtilities (~> 1.1)
@@ -102,66 +66,27 @@ PODS:
   - GTMSessionFetcher/Full (1.1.9):
     - GTMSessionFetcher/Core (= 1.1.9)
   - ProgressHUD (2.4)
+  - SwiftKeychainWrapper (3.0.1)
   - SwiftLocation (1.1.1)
 
 DEPENDENCIES:
   - Alamofire
-  - AWSAutoScaling
-  - AWSCloudWatch
-  - AWSCognito
-  - AWSCognitoIdentityProvider
-  - AWSDynamoDB
-  - AWSEC2
-  - AWSElasticLoadBalancing
-  - AWSIoT
-  - AWSKinesis
-  - AWSLambda
-  - AWSLex
-  - AWSMachineLearning
-  - AWSMobileAnalytics
-  - AWSPinpoint
-  - AWSPolly
-  - AWSRekognition
-  - AWSS3
-  - AWSSES
-  - AWSSimpleDB
-  - AWSSNS
-  - AWSSQS
   - Firebase
+  - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Google/SignIn
   - GoogleMaps
   - GooglePlaces
   - ProgressHUD
+  - SwiftKeychainWrapper
   - SwiftLocation
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
-  AWSAutoScaling: 7fe819fa52fb37d2b4b15535ad557a219213a6a8
-  AWSCloudWatch: 765c1878c5005328acb24e15e523f98755ab90c0
-  AWSCognito: a29c52e3a3d4988f01b449c8b229a51b73d1c1bf
-  AWSCognitoIdentityProvider: 496a5d717180e4127f038be3c6494bc59e8ff4dd
-  AWSCore: b2fe455c2c7d6653521238c5b0b0ddb67ec4f063
-  AWSDynamoDB: 311ba51593276a198f8a611c9e89706bd0fe740f
-  AWSEC2: 0d88da0cb9d9d900a5b1e62f97a2365075b301fd
-  AWSElasticLoadBalancing: f7ba3b23dd605e283535e3ef42fba5db766eb1e2
-  AWSIoT: 282cd15afffb9c3a5767efa36f8d330635f0802c
-  AWSKinesis: 124bfe652495ca07e63cd947080829679cc32547
-  AWSLambda: 330b7bddbb34632de02b31536cb7f7c10546dfc4
-  AWSLex: b3a075d6c08321d6b10fa952d3c6dfd241e36d48
-  AWSMachineLearning: c77fe5eba3207bf1c26944b22d868973ee825300
-  AWSMobileAnalytics: d0ce50be90fba6b1dfac20f66c18ac7dc3daf6b6
-  AWSPinpoint: f33f4fed418034999d0708853b0889f6bdea676b
-  AWSPolly: a87083d6ec5278a81f6aa222eb8ecea852e53027
-  AWSRekognition: 3e4af236a7787336ae3d68378fa757927664095b
-  AWSS3: 1f53d780bae0a5949f11da99520c14684bc90af0
-  AWSSES: 01c1bd6953d7c3b8e2698ff6c30fc9b111c1c656
-  AWSSimpleDB: ba37cce420e00c9400bd62a54740dfc7083fc9d0
-  AWSSNS: 3437c505bfb8d5eda6bfc497368462ae31423324
-  AWSSQS: 558aac70d0c908fa5f3b043410243595e4100ff4
   Firebase: 8e99eb1ff553ad5bcc6072cc3d925bb89c1244d6
   FirebaseAnalytics: 9c67af0ebeb8d2146c9b4ea2616439affa947b58
+  FirebaseAuth: b436e4ecebe068bf8e8c6e4e29de5756ffe7ee24
   FirebaseCore: 46afaf2c2e0419ea7d3acfb08cf26a461a75fe85
   FirebaseDatabase: 6de92187481ff0e8e124064f21742e95ee883b02
   FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
@@ -175,8 +100,9 @@ SPEC CHECKSUMS:
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
   ProgressHUD: 4b66b0df0e08519c5c7283a198fd2867a114c95a
+  SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
   SwiftLocation: aac16955b508c46b82bf07fcceb7e2a3b382b8d5
 
-PODFILE CHECKSUM: 78d4394e60e5570369423de8f2beca2886eeeab8
+PODFILE CHECKSUM: 988a046e852799c1fd121434f1844b13807f19a8
 
 COCOAPODS: 1.2.0
