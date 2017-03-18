@@ -1,4 +1,4 @@
-//
+/*//
 //  DistancesViewController.swift
 //  majorProject
 //
@@ -705,4 +705,4 @@ class DistancesViewController: UIViewController,CLLocationManagerDelegate {
     
     
 }
-
+*/

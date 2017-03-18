@@ -8,10 +8,12 @@
 
 import UIKit
 import GoogleSignIn
+import AWSCognito
+import AWSCore
 
-class LoginVc: UIViewController,GIDSignInDelegate,GIDSignInUIDelegate {
+class LoginVc: UIViewController,GIDSignInDelegate,GIDSignInUIDelegate ,AWSIdentityProviderManager{
     
-    
+    var googleIdToekn = ""
     
 
     override func viewDidLoad() {
@@ -40,10 +42,45 @@ class LoginVc: UIViewController,GIDSignInDelegate,GIDSignInUIDelegate {
         let name = user.profile.name
         let email = user.profile.email
         
-        
+        signInToCognito(user: user)
         }
     }
-
-
+    
+    func logins() -> AWSTask<NSDictionary> {
+        let result = NSDictionary(dictionary: [AWSIdentityProviderGoogle:googleIdToekn])
+        return AWSTask(result: result)
+    }
+    
+    func signInToCognito(user:GIDGoogleUser){
+    
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USWest2,
+                                                                identityPoolId:"us-west-2:5a019b74-ee3f-4045-a8ca-73cf8fada15a")
+        
+        let configuration = AWSServiceConfiguration(region:.USWest2, credentialsProvider:credentialsProvider)
+        
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
+        
+        credentialsProvider.getIdentityId().continueWith { (task:AWSTask) -> AnyObject? in
+            if (task.error != nil) {
+                print(task.error!)
+                return nil
+            }
+            
+            let syncClient = AWSCognito.default()
+            
+            // Create a record in a dataset and synchronize with the server
+            let dataset = syncClient.openOrCreateDataset("myDataset")
+            dataset.setString("myValue", forKey:"myKey")
+            dataset.synchronize().continueWith {(task: AWSTask!) -> AnyObject! in
+                // Your handler code here
+                return nil
+            
+            }
+            return nil
+        }
+     
+        performSegue(withIdentifier: "logined", sender: nil)
+        
+    }
 }
 

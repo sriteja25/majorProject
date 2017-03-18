@@ -14,9 +14,9 @@
 		CB3ED4BB1DAB8EB600F616A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB3ED4B91DAB8EB600F616A3 /* LaunchScreen.storyboard */; };
 		CB3ED4C61DAB8EB600F616A3 /* majorProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3ED4C51DAB8EB600F616A3 /* majorProjectTests.swift */; };
 		CB3ED4D11DAB8EB600F616A3 /* majorProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3ED4D01DAB8EB600F616A3 /* majorProjectUITests.swift */; };
-		CB3ED4E11DAD112D00F616A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB3ED4E01DAD112D00F616A3 /* GoogleService-Info.plist */; };
 		CB4728A91E5B017400CC2FEF /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4728A81E5B017400CC2FEF /* Transitions.swift */; };
 		CB4728AC1E5B034400CC2FEF /* WeatherForecaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4728AB1E5B034400CC2FEF /* WeatherForecaseViewController.swift */; };
+		CB6494AC1E7C814100BD0606 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB6494AB1E7C814100BD0606 /* GoogleService-Info.plist */; };
 		CB9C4CFD1E7C6A79005AFB07 /* LoginVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9C4CFC1E7C6A79005AFB07 /* LoginVc.swift */; };
 		CBA95F3A1E71857500B78ABD /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA95F381E71857500B78ABD /* LocationSearchTable.swift */; };
 		CBA95F3B1E71857500B78ABD /* SourceVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA95F391E71857500B78ABD /* SourceVc.swift */; };
@@ -90,9 +90,9 @@
 		CB3ED4CC1DAB8EB600F616A3 /* majorProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = majorProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3ED4D01DAB8EB600F616A3 /* majorProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = majorProjectUITests.swift; sourceTree = "<group>"; };
 		CB3ED4D21DAB8EB600F616A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB3ED4E01DAD112D00F616A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB4728A81E5B017400CC2FEF /* Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
 		CB4728AB1E5B034400CC2FEF /* WeatherForecaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherForecaseViewController.swift; sourceTree = "<group>"; };
+		CB6494AB1E7C814100BD0606 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB9C4CFC1E7C6A79005AFB07 /* LoginVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVc.swift; sourceTree = "<group>"; };
 		CBA95F381E71857500B78ABD /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		CBA95F391E71857500B78ABD /* SourceVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceVc.swift; sourceTree = "<group>"; };
@@ -282,10 +282,10 @@
 		CB9C4CFF1E7C6AD0005AFB07 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CB6494AB1E7C814100BD0606 /* GoogleService-Info.plist */,
 				CBF0A8361DC85A0100315E00 /* Images */,
 				CBF0A8221DC855C000315E00 /* Weather */,
 				CBD79C721DC1A6C700F5D927 /* GeoFire */,
-				CB3ED4E01DAD112D00F616A3 /* GoogleService-Info.plist */,
 				CB3ED4B91DAB8EB600F616A3 /* LaunchScreen.storyboard */,
 				CBF0A8BA1DC8739B00315E00 /* Assets.xcassets */,
 				CB3ED4BC1DAB8EB600F616A3 /* Info.plist */,
@@ -490,8 +490,8 @@
 				CBF0A83A1DC85A3400315E00 /* button.png in Resources */,
 				CBB134601E5C399900D5196D /* BG.jpg in Resources */,
 				CBF0A8BB1DC8739B00315E00 /* Assets.xcassets in Resources */,
-				CB3ED4E11DAD112D00F616A3 /* GoogleService-Info.plist in Resources */,
 				CBF0A83C1DC85A3400315E00 /* Transport.png in Resources */,
+				CB6494AC1E7C814100BD0606 /* GoogleService-Info.plist in Resources */,
 				CBF0A8421DC85C9B00315E00 /* GreenRoundedButton.png in Resources */,
 				CB3ED4B61DAB8EB600F616A3 /* Main.storyboard in Resources */,
 				CBF0A8481DC85F7000315E00 /* weather.jpg in Resources */,

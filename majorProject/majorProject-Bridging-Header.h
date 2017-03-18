@@ -10,6 +10,11 @@
 #define majorProject_Bridging_Header_h
 
 #import "GeoFire.h"
+#import <Google/SignIn.h>
+
+
+
+
 
 
 #endif /* majorProject_Bridging_Header_h */
