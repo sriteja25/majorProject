@@ -19,6 +19,7 @@ target 'majorProject' do
 	pod 'Firebase/Auth'
 	pod 'SwiftKeychainWrapper'
     	pod 'Google/SignIn'
+	pod 'MarqueeLabel/Swift'
 
 	
 

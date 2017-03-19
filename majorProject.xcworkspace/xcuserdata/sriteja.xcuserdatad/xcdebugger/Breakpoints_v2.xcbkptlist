@@ -58,7 +58,7 @@
                   moduleName = "majorProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sriteja/Documents/majorProject/majorProject/WeatherForecaseViewController.swift"
-                  timestampString = "511521755.722268"
+                  timestampString = "511591398.168392"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "53"
@@ -73,7 +73,7 @@
                   moduleName = "majorProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sriteja/Documents/majorProject/majorProject/WeatherForecaseViewController.swift"
-                  timestampString = "511521755.725248"
+                  timestampString = "511591398.171189"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "53"
@@ -106,7 +106,7 @@
                   moduleName = "majorProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sriteja/Documents/majorProject/majorProject/WeatherForecaseViewController.swift"
-                  timestampString = "511521755.730469"
+                  timestampString = "511591398.176152"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "55"
@@ -121,7 +121,7 @@
                   moduleName = "majorProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sriteja/Documents/majorProject/majorProject/WeatherForecaseViewController.swift"
-                  timestampString = "511521755.733031"
+                  timestampString = "511591398.179095"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "55"
@@ -250,7 +250,7 @@
                   moduleName = "majorProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sriteja/Documents/majorProject/majorProject/RecomendationVc.swift"
-                  timestampString = "511521755.762596"
+                  timestampString = "511591398.207452"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "238"
@@ -265,7 +265,7 @@
                   moduleName = "majorProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sriteja/Documents/majorProject/majorProject/RecomendationVc.swift"
-                  timestampString = "511521755.765904"
+                  timestampString = "511591398.208916"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "238"
@@ -330,7 +330,7 @@
                   moduleName = "majorProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sriteja/Documents/majorProject/majorProject/RecomendationVc.swift"
-                  timestampString = "511521755.778889"
+                  timestampString = "511591398.217247"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "290"
@@ -345,7 +345,7 @@
                   moduleName = "majorProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sriteja/Documents/majorProject/majorProject/RecomendationVc.swift"
-                  timestampString = "511521755.78371"
+                  timestampString = "511591398.219155"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "290"
@@ -576,6 +576,70 @@
             startingLineNumber = "65"
             endingLineNumber = "65"
             landmarkName = "signInToCognito(user:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "majorProject/HomeVc.swift"
+            timestampString = "511591961.458661"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "stringFromTimeInterval(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "majorProject/HomeVc.swift"
+            timestampString = "511591961.458661"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "stringFromTimeInterval(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "majorProject/HomeVc.swift"
+            timestampString = "511591961.458661"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "gettingWeather()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "majorProject/HomeVc.swift"
+            timestampString = "511591961.458661"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "gettingWeather()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

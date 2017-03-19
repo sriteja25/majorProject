@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MarqueeLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-majorProject.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,22 +62,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>06838E31F10AB6D84DA2C7CBC4727DF0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>0BCC299ACCB6004FEFC07340ADF55317</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>100990827B3CD5DDE9C9F34523C3538E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>320AD47B0C6BA014D301395D3BFC8FB6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>363731547560C97B4BDD71E91C36BDAE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>673FAA17435CE4BE538049F8B7380FE4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,12 +102,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>DC252669AFF8E1C957D0E8BD17A575B5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>E697909907776C6531B540CF20A1A69C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F7311184D5CB3AA69ED6D873262BA587</key>
+		<key>F647024CB7BDB5119C793BA9742B023D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

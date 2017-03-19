@@ -65,6 +65,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.9)
   - GTMSessionFetcher/Full (1.1.9):
     - GTMSessionFetcher/Core (= 1.1.9)
+  - MarqueeLabel/Swift (3.0.1)
   - ProgressHUD (2.4)
   - SwiftKeychainWrapper (3.0.1)
   - SwiftLocation (1.1.1)
@@ -78,6 +79,7 @@ DEPENDENCIES:
   - Google/SignIn
   - GoogleMaps
   - GooglePlaces
+  - MarqueeLabel/Swift
   - ProgressHUD
   - SwiftKeychainWrapper
   - SwiftLocation
@@ -99,10 +101,11 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
+  MarqueeLabel: 80ba85d2b76a9f5fa6c13de337db80bcd94feb1d
   ProgressHUD: 4b66b0df0e08519c5c7283a198fd2867a114c95a
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
   SwiftLocation: aac16955b508c46b82bf07fcceb7e2a3b382b8d5
 
-PODFILE CHECKSUM: 988a046e852799c1fd121434f1844b13807f19a8
+PODFILE CHECKSUM: 8a2947244cb5996dc006519639bead567c3e9045
 
 COCOAPODS: 1.2.0
