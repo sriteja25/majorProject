@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7y7-Y3-AXW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZmR-7a-uxJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -32,7 +32,7 @@
                                         <rect key="frame" x="0.0" y="-44" width="375" height="667"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Suu-iD-LWm">
-                                                <rect key="frame" x="81" y="421" width="246" height="55"/>
+                                                <rect key="frame" x="81" y="367" width="246" height="55"/>
                                                 <color key="backgroundColor" red="0.25098039220000001" green="0.5450980392" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="p5V-Q8-79S"/>
@@ -44,15 +44,8 @@
                                                     <segue destination="tjF-mB-KOA" kind="show" id="IEr-II-Zd4"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="19/03/2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xct-8Z-fwP">
-                                                <rect key="frame" x="106" y="96" width="163" height="42"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="09 - 160C    10 - 200C" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZS-ig-IHW" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                <rect key="frame" x="40" y="152" width="294" height="97"/>
+                                                <rect key="frame" x="36" y="565" width="324" height="97"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -81,25 +74,39 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="holdScrolling" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date :     19/03/2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xct-8Z-fwP">
+                                                <rect key="frame" x="51" y="505" width="289" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwj-WE-p00">
+                                                <rect key="frame" x="81" y="250" width="246" height="55"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.25098039215686274" green="0.54509803921568623" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Travel Now !">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="KZl-Mx-jdf" kind="show" id="px8-8n-yK3"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hbJ-UK-8XY">
+                                                <rect key="frame" x="22" y="91" width="331" height="120"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.33224936548223349" green="0.33224936548223349" blue="0.33224936548223349" alpha="0.41660423802054797" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="Suu-iD-LWm" firstAttribute="leading" secondItem="1mP-Nj-WwH" secondAttribute="leading" constant="81" id="2mL-Ry-gAn"/>
-                                            <constraint firstAttribute="bottom" secondItem="Suu-iD-LWm" secondAttribute="bottom" constant="191" id="Fho-DL-T5Q"/>
+                                            <constraint firstAttribute="bottom" secondItem="Suu-iD-LWm" secondAttribute="bottom" constant="245" id="Fho-DL-T5Q"/>
                                             <constraint firstAttribute="trailing" secondItem="Suu-iD-LWm" secondAttribute="trailing" constant="48" id="zD3-17-CII"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwj-WE-p00">
-                                        <rect key="frame" x="79" y="266" width="246" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.25098039215686274" green="0.54509803921568623" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Travel Now !">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="KZl-Mx-jdf" kind="show" id="px8-8n-yK3"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -126,10 +133,17 @@
                             <constraint firstItem="PKk-Wn-6ig" firstAttribute="top" secondItem="vFh-vp-wZt" secondAttribute="topMargin" constant="44" id="aPh-hg-owq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="hRd-EE-mus"/>
+                    <navigationItem key="navigationItem" title="Home" id="hRd-EE-mus">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="WoH-pT-jvT">
+                            <connections>
+                                <action selector="logoutButton:" destination="XYl-4R-gez" id="CVJ-d8-iZq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dateLabel" destination="xct-8Z-fwP" id="vTE-x6-TWa"/>
                         <outlet property="mLabel" destination="yZS-ig-IHW" id="649-ZP-hFl"/>
+                        <outlet property="myLocation" destination="hbJ-UK-8XY" id="hZ9-aW-7dn"/>
                         <outlet property="transport" destination="kwj-WE-p00" id="LRy-JQ-f8F"/>
                     </connections>
                 </viewController>
@@ -1024,6 +1038,28 @@
             </objects>
             <point key="canvasLocation" x="-194" y="-741"/>
         </scene>
+        <!--Launch Vc-->
+        <scene sceneID="sc1-e3-hwl">
+            <objects>
+                <viewController id="ZmR-7a-uxJ" customClass="LaunchVc" customModule="majorProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0w6-dC-nHt"/>
+                        <viewControllerLayoutGuide type="bottom" id="x46-bN-zqG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dmk-hk-Wfz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="fab-57-qat" kind="show" identifier="toSignIn" id="2bd-2k-OVL"/>
+                        <segue destination="7y7-Y3-AXW" kind="show" identifier="noSignIn" id="Ynb-J1-am8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTa-Gu-9eb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2133" y="-700"/>
+        </scene>
         <!--Sign In View Controller-->
         <scene sceneID="U16-2o-SSP">
             <objects>
@@ -1192,5 +1228,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="px8-8n-yK3"/>
+        <segue reference="Ynb-J1-am8"/>
     </inferredMetricsTieBreakers>
 </document>

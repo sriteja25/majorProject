@@ -16,6 +16,7 @@
 		CB3ED4D11DAB8EB600F616A3 /* majorProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3ED4D01DAB8EB600F616A3 /* majorProjectUITests.swift */; };
 		CB4728A91E5B017400CC2FEF /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4728A81E5B017400CC2FEF /* Transitions.swift */; };
 		CB4728AC1E5B034400CC2FEF /* WeatherForecaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4728AB1E5B034400CC2FEF /* WeatherForecaseViewController.swift */; };
+		CB4F041B1E7F96D200E30D13 /* LaunchVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F041A1E7F96D200E30D13 /* LaunchVc.swift */; };
 		CB6109161E7DB1B7006E183C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6109151E7DB1B7006E183C /* SignInViewController.swift */; };
 		CB6109181E7DB30F006E183C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB6109171E7DB30F006E183C /* GoogleService-Info.plist */; };
 		CBA95F3A1E71857500B78ABD /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA95F381E71857500B78ABD /* LocationSearchTable.swift */; };
@@ -92,6 +93,7 @@
 		CB3ED4D21DAB8EB600F616A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB4728A81E5B017400CC2FEF /* Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
 		CB4728AB1E5B034400CC2FEF /* WeatherForecaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherForecaseViewController.swift; sourceTree = "<group>"; };
+		CB4F041A1E7F96D200E30D13 /* LaunchVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchVc.swift; sourceTree = "<group>"; };
 		CB6109151E7DB1B7006E183C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CB6109171E7DB30F006E183C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CBA95F381E71857500B78ABD /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				CBB134591E5BB40600D5196D /* ForecastViewController.swift */,
 				CBB1345B1E5BD4C300D5196D /* TransportVc.swift */,
 				CBB1345D1E5BD4D700D5196D /* RecomendationVc.swift */,
+				CB4F041A1E7F96D200E30D13 /* LaunchVc.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				CBFA46751DB467F10026503E /* MapViewController.swift in Sources */,
 				CBD79C861DC1A6C700F5D927 /* GFGeoHash.m in Sources */,
 				CB3ED4B11DAB8EB600F616A3 /* AppDelegate.swift in Sources */,
+				CB4F041B1E7F96D200E30D13 /* LaunchVc.swift in Sources */,
 				CBD79C881DC1A6C700F5D927 /* GFQuery.m in Sources */,
 				CBB1345A1E5BB40600D5196D /* ForecastViewController.swift in Sources */,
 			);

@@ -20,6 +20,10 @@ class SignInViewController: UIViewController/*,GIDSignInDelegate,GIDSignInUIDele
     @IBOutlet weak var pwdEntered: UITextField!
     @IBOutlet var signInButton: UIButton!
     
+    var ref: FIRDatabaseReference!
+    
+    var userId : String = ""
+    
     var isKeyboardVisible:Bool!
    /* @IBOutlet var facebookSignInButton: UIButton!
     
@@ -48,7 +52,7 @@ class SignInViewController: UIViewController/*,GIDSignInDelegate,GIDSignInUIDele
         self.emailIDEntered.delegate = self
         self.pwdEntered.delegate = self
         
-       
+       ref = FIRDatabase.database().reference()
         
         
         //emailIDEntered.textFieldBorder(textField : emailIDEntered)
@@ -91,6 +95,7 @@ class SignInViewController: UIViewController/*,GIDSignInDelegate,GIDSignInUIDele
                     print("JESS: Email user authenticated with Firebase")
                     if let user = user {
                         let userData = ["provider": user.providerID]
+                        self.userId = user.providerID
                         self.completeSignIn(id: user.uid, userData: userData)
                     }
                 } else {
@@ -101,6 +106,8 @@ class SignInViewController: UIViewController/*,GIDSignInDelegate,GIDSignInUIDele
                             print("JESS: Successfully authenticated with Firebase")
                             if let user = user {
                                 let userData = ["provider": user.providerID]
+                                
+                                self.userId = user.providerID
                                 self.completeSignIn(id: user.uid, userData: userData)
                             }
                         }
@@ -113,9 +120,17 @@ class SignInViewController: UIViewController/*,GIDSignInDelegate,GIDSignInUIDele
     func completeSignIn(id: String, userData: Dictionary<String, String>) {
         //DataService.ds.createFirbaseDBUser(uid: id, userData: userData)
         //let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
-        let keychainResult = KeychainWrapper.defaultKeychainWrapper.set(id, forKey: "keychain")
+        let keychainResult = KeychainWrapper.defaultKeychainWrapper.set(userId, forKey: "keychain")
+        saveInFirebase()
         print("JESS: Data saved to keychain \(keychainResult)")
         performSegue(withIdentifier: "loggedIn", sender: nil)
+    }
+    
+    func saveInFirebase(){
+        
+        self.ref.child("users").child(userId)
+    
+    
     }
     
 }
