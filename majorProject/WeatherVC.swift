@@ -1,4 +1,4 @@
-//
+/*//
 //  WeatherVC.swift
 //  rainyshinycloudy
 //
@@ -112,4 +112,4 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     }
     
 }
-
+*/

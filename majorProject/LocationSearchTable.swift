@@ -9,12 +9,17 @@
 import UIKit
 import MapKit
 
+
+
 class LocationSearchTable: UITableViewController {
     
     
     weak var handleMapSearchDelegate: HandleMapSearch?
     var matchingItems: [MKMapItem] = []
     var mapView: MKMapView?
+    //var myAdress:String = ""
+    let searchController = UISearchController(searchResultsController: nil)
+    
     
     
     func parseAddress(_ selectedItem:MKPlacemark) -> String {
@@ -45,6 +50,8 @@ class LocationSearchTable: UITableViewController {
             // state
             selectedItem.administrativeArea ?? ""
         )
+        
+        
         
         return addressLine
     }
@@ -92,10 +99,24 @@ extension LocationSearchTable {
 
 extension LocationSearchTable {
     
+    
+    
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let selectedItem = matchingItems[(indexPath as NSIndexPath).row].placemark
         handleMapSearchDelegate?.dropPinZoomIn(selectedItem)
+        //let myCell = parseAddress(selectedItem)
+        
+        let defaults = UserDefaults.standard
+        var myAdress = defaults.object(forKey: "myAdress") as? String ?? ""
+        myAdress = selectedItem.name!
+        searchController.searchBar.text = myAdress
+        defaults.set(myAdress, forKey: "myAdress")
+        defaults.synchronize()
         dismiss(animated: true, completion: nil)
     }
+    
+    
     
 }

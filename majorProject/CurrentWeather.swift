@@ -1,4 +1,4 @@
-//
+/*//
 //  CurrentWeather.swift
 //  rainyshinycloudy
 //
@@ -92,7 +92,7 @@ class CurrentWeather {
 
 
 
-
+*/
 
 
 

@@ -17,8 +17,12 @@
 		CB4728A91E5B017400CC2FEF /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4728A81E5B017400CC2FEF /* Transitions.swift */; };
 		CB4728AC1E5B034400CC2FEF /* WeatherForecaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4728AB1E5B034400CC2FEF /* WeatherForecaseViewController.swift */; };
 		CB4F041B1E7F96D200E30D13 /* LaunchVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F041A1E7F96D200E30D13 /* LaunchVc.swift */; };
+		CB4F04211E7FABF300E30D13 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F04201E7FABF300E30D13 /* constants.swift */; };
+		CB4F04231E7FAE7D00E30D13 /* RegisterVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4F04221E7FAE7D00E30D13 /* RegisterVc.swift */; };
 		CB6109161E7DB1B7006E183C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6109151E7DB1B7006E183C /* SignInViewController.swift */; };
 		CB6109181E7DB30F006E183C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB6109171E7DB30F006E183C /* GoogleService-Info.plist */; };
+		CB739B9F1E877AAB0048203E /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = CB739B9E1E877AAB0048203E /* test.json */; };
+		CB9DEE3D1E83A1090056ED1A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9DEE3C1E83A1090056ED1A /* TestViewController.swift */; };
 		CBA95F3A1E71857500B78ABD /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA95F381E71857500B78ABD /* LocationSearchTable.swift */; };
 		CBA95F3B1E71857500B78ABD /* SourceVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA95F391E71857500B78ABD /* SourceVc.swift */; };
 		CBB134541E5BA74800D5196D /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB134531E5BA74800D5196D /* WeatherTableViewCell.swift */; };
@@ -94,8 +98,12 @@
 		CB4728A81E5B017400CC2FEF /* Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
 		CB4728AB1E5B034400CC2FEF /* WeatherForecaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherForecaseViewController.swift; sourceTree = "<group>"; };
 		CB4F041A1E7F96D200E30D13 /* LaunchVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchVc.swift; sourceTree = "<group>"; };
+		CB4F04201E7FABF300E30D13 /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		CB4F04221E7FAE7D00E30D13 /* RegisterVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVc.swift; sourceTree = "<group>"; };
 		CB6109151E7DB1B7006E183C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CB6109171E7DB30F006E183C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CB739B9E1E877AAB0048203E /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		CB9DEE3C1E83A1090056ED1A /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		CBA95F381E71857500B78ABD /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		CBA95F391E71857500B78ABD /* SourceVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceVc.swift; sourceTree = "<group>"; };
 		CBB134531E5BA74800D5196D /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
@@ -257,6 +265,7 @@
 				CB4728A81E5B017400CC2FEF /* Transitions.swift */,
 				CBB134531E5BA74800D5196D /* WeatherTableViewCell.swift */,
 				CBF088F91E6516EF006EF66C /* extenstions.swift */,
+				CB4F04201E7FABF300E30D13 /* constants.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -264,6 +273,7 @@
 		CB4728AA1E5B020E00CC2FEF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CB9DEE391E83833D0056ED1A /* json */,
 				CB6109151E7DB1B7006E183C /* SignInViewController.swift */,
 				CBA95F381E71857500B78ABD /* LocationSearchTable.swift */,
 				CBA95F391E71857500B78ABD /* SourceVc.swift */,
@@ -278,6 +288,9 @@
 				CBB1345B1E5BD4C300D5196D /* TransportVc.swift */,
 				CBB1345D1E5BD4D700D5196D /* RecomendationVc.swift */,
 				CB4F041A1E7F96D200E30D13 /* LaunchVc.swift */,
+				CB4F04221E7FAE7D00E30D13 /* RegisterVc.swift */,
+				CB9DEE3C1E83A1090056ED1A /* TestViewController.swift */,
+				CB739B9E1E877AAB0048203E /* test.json */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -294,6 +307,13 @@
 				CB3ED4BC1DAB8EB600F616A3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB9DEE391E83833D0056ED1A /* json */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = json;
 			sourceTree = "<group>";
 		};
 		CBD79C721DC1A6C700F5D927 /* GeoFire */ = {
@@ -490,6 +510,7 @@
 				CB6109181E7DB30F006E183C /* GoogleService-Info.plist in Resources */,
 				CBF0A8401DC85B2800315E00 /* GreenRoundedButton copy.png in Resources */,
 				CBF0A8441DC85DA400315E00 /* blank-empty-button-aqua-silver-999999-500x227.jpg in Resources */,
+				CB739B9F1E877AAB0048203E /* test.json in Resources */,
 				CBF0A8461DC85DE300315E00 /* GrayRoundedButton.png in Resources */,
 				CBF0A83A1DC85A3400315E00 /* button.png in Resources */,
 				CBB134601E5C399900D5196D /* BG.jpg in Resources */,
@@ -682,6 +703,9 @@
 				CBD79C841DC1A6C700F5D927 /* GeoFire.m in Sources */,
 				CB4728A91E5B017400CC2FEF /* Transitions.swift in Sources */,
 				CBF0A8281DC856B700315E00 /* Constants.swift in Sources */,
+				CB4F04211E7FABF300E30D13 /* constants.swift in Sources */,
+				CB9DEE3D1E83A1090056ED1A /* TestViewController.swift in Sources */,
+				CB4F04231E7FAE7D00E30D13 /* RegisterVc.swift in Sources */,
 				CBFA46751DB467F10026503E /* MapViewController.swift in Sources */,
 				CBD79C861DC1A6C700F5D927 /* GFGeoHash.m in Sources */,
 				CB3ED4B11DAB8EB600F616A3 /* AppDelegate.swift in Sources */,

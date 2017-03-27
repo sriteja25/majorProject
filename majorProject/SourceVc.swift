@@ -22,6 +22,11 @@ class ViewController: UIViewController {
     
     var mySelectedPlace:String = ""
     var searchBar = UISearchBar()
+    var b:Int?
+    var a:Int?
+    var myLocation:String?
+    var myDestination:String?
+     let defaults = UserDefaults.standard
     
     
     @IBOutlet weak var mapView: MKMapView!
@@ -56,10 +61,37 @@ class ViewController: UIViewController {
         locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let myAdress = defaults.object(forKey: "myAdress") as? String ?? ""
         
+        myLocation = myAdress
+        searchBar.text = myAdress
+    }
+
+    
+    
+    func storeValues() {
+        a = defaults.object(forKey: "a") as? Int ?? 0
         
-        
-        
+        if (a == 1){
+            
+            
+            
+            let myAdress = defaults.object(forKey: "myAdress") as? String ?? ""
+            
+            myLocation = myAdress
+            
+        }
+        if (a==2){
+            
+            let myAdress = defaults.object(forKey: "myAdress") as? String ?? ""
+            searchBar.text = myAdress
+            myDestination = myAdress
+            
+            
+        }
     }
     
     func getDirections(){
@@ -71,13 +103,9 @@ class ViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: Any) {
         
-        let defaults = UserDefaults.standard
+        storeValues()
         
-        let source = defaults.object(forKey: "source") as? String ?? "Potheri"
-        
-        mySelectedPlace = searchBar.text!
-        
-        defaults.set(mySelectedPlace, forKey: "source")
+        defaults.set(myLocation, forKey: "source")
         
         defaults.synchronize()
         
@@ -88,13 +116,9 @@ class ViewController: UIViewController {
     
     @IBAction func doneButtonPressed(_ sender: Any) {
         
-        let defaults = UserDefaults.standard
-        
-        let destination = defaults.object(forKey: "destination") as? String ?? "Egmore"
-        
-        mySelectedPlace = searchBar.text!
-        
-        defaults.set(mySelectedPlace, forKey: "destination")
+        storeValues()
+      
+        defaults.set(myDestination, forKey: "destination")
         defaults.synchronize()
         
         performSegue(withIdentifier: "myDestinationTo", sender: nil)

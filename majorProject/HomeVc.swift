@@ -51,12 +51,16 @@ class HomeVc: UIViewController,CLLocationManagerDelegate {
         let defaults = UserDefaults.standard
         defaults.removeObject(forKey: "source")
         defaults.removeObject(forKey: "destination")
+        defaults.removeObject(forKey: "myAdress")
+        defaults.removeObject(forKey: "a")
+        //defaults.removeObject(forKey: "")
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
+        navigationItem.backBarButtonItem?.isEnabled = false
         
         gettingWeather()
 
@@ -190,7 +194,7 @@ class HomeVc: UIViewController,CLLocationManagerDelegate {
         func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
             let lastLocation: CLLocation = locations[0]
             
-                print(lastLocation.coordinate.latitude,lastLocation.coordinate.longitude)
+               // print(lastLocation.coordinate.latitude,lastLocation.coordinate.longitude)
             
             
             lat = lastLocation.coordinate.latitude
@@ -210,8 +214,7 @@ class HomeVc: UIViewController,CLLocationManagerDelegate {
         let appDelegate =  UIApplication.shared.delegate as! AppDelegate
         
         KeychainWrapper.standard.removeObject(forKey: "keychain")
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LaunchController")
-        appDelegate.window?.rootViewController = vc
+        performSegue(withIdentifier: "loggedOut", sender: nil)
         
         
     }
@@ -232,7 +235,7 @@ class HomeVc: UIViewController,CLLocationManagerDelegate {
                 
                 myLocation.text = placemark.compactAddress!
                 
-                print(placemark.compactAddress)
+               // print(placemark.compactAddress)
             } else {
                 //locationLabel.text = "No Matching Addresses Found"
             }

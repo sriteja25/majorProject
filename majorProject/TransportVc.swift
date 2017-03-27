@@ -26,6 +26,8 @@ class TransportVc: UIViewController {
     
     var fastestBool:Bool = false
     var cheapestBool:Bool = false
+    let defaults = UserDefaults.standard
+    var a:Int?
     
     
     
@@ -47,7 +49,7 @@ class TransportVc: UIViewController {
         startPlace.text = source
         endPlace.text = destination
         
-        
+        a = defaults.object(forKey: "a") as? Int ?? 0
     }
 
     override func didReceiveMemoryWarning() {
@@ -114,12 +116,20 @@ class TransportVc: UIViewController {
     }
     
     @IBAction func myLocation(_ sender: Any) {
+ 
+        defaults.set(1, forKey: "a")
+        defaults.synchronize()
         
         performSegue(withIdentifier: "myLocation", sender: nil)
         
     }
     
     @IBAction func myDestination(_ sender: Any) {
+        
+        
+        
+        defaults.set(2, forKey: "a")
+        defaults.synchronize()
         
         performSegue(withIdentifier: "myDestination", sender: nil)
         

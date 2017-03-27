@@ -30,6 +30,10 @@ class RecomendationVc: UIViewController {
     var publiceDistance:String = ""
     var publicDuration:String = ""
     var pubDeptTime:String = ""
+    var pubTrain:String = ""
+    
+    
+    
 
     
     
@@ -77,6 +81,7 @@ class RecomendationVc: UIViewController {
         
         privateTransport()
         transit()
+        getTimings()
         
         
         
@@ -156,8 +161,10 @@ class RecomendationVc: UIViewController {
     
         let defaults = UserDefaults.standard
         
-        let origin = defaults.object(forKey: "origin") as? String ?? ""
-        let destination = defaults.object(forKey: "destination") as? String ?? ""
+        var origin = defaults.object(forKey: "origin") as? String ?? ""
+        origin = origin.replacingOccurrences(of: " ", with: "-")
+        var destination = defaults.object(forKey: "destination") as? String ?? ""
+        destination = destination.replacingOccurrences(of: " ", with: "-")
         let cheap = defaults.object(forKey: "cheapest") as? Bool ?? false
         let fast = defaults.object(forKey: "fastest") as? Bool ?? false
         
@@ -248,7 +255,7 @@ class RecomendationVc: UIViewController {
                     print(self.publicDuration)
                     print(self.publiceDistance)
                     
-                    self.recomendationForTransport()
+                    //self.recomendationForTransport()
                     ProgressHUD.dismiss()
                 }
                 
@@ -299,40 +306,10 @@ class RecomendationVc: UIViewController {
         return Float(5.0 / 9.0 * (Double(fahrenheit) - 32.0))
     }
     
-    func recomendedPrivate(){
     
-        distance.text = "Distance  " + privateDistance
-        duration.text = "Duration  " + privateDuration
-        otherDistance.text = "Distance  " + publiceDistance
-        otherDuration.text = "Duration  " + publicDuration
-        
-        nextBestTime.text = "Next Available Cab " + " "
-        otherBestLabel.text = "Next Bus is at    " + pubDeptTime
-        //cab1.isHidden = false
-        //cab2.isHidden = true
-        
-        
-        recomendation.text = "We recomend Taking a Cab"
+     //Default - 0 , Very humid - 1, Rain - 2, C rain - 3
     
-    
-    }
-    func recomendedPublic(){
-        
-        otherDistance.text = "Distance  " + privateDistance
-        otherDuration.text = "Duration  " + privateDuration
-        distance.text = "Distance  " + publiceDistance
-        duration.text = "Duration  " + publicDuration
-        
-        recomendation.text = "We recomend Taking a Public Transport"
-        nextBestTime.text = "Nex Available Bus is at     " + pubDeptTime
-        otherBestLabel.text = "Next Available Cab " + ""
-        //cab1.isHidden = true
-        //cab2.isHidden = false
-        
-        
-    }
-    
-    func recomendationForTransport(){
+   /* func recomendationForTransport(){
     
         if (self.fastest == true){
         
@@ -544,7 +521,7 @@ class RecomendationVc: UIViewController {
     
     
     
-    }
+    }*/
     
     func checkIcon(){
     
@@ -598,5 +575,174 @@ class RecomendationVc: UIViewController {
     
     }
     
+    func getTimings(){
+        
+        
+        if let path :String = Bundle.main.path(forResource: "test", ofType: "json"){
+            
+            do{
+                
+                
+                let data = try(NSData(contentsOfFile: path, options: NSData.ReadingOptions.dataReadingMapped))
+                
+                let jsonDisctionary = try(JSONSerialization.jsonObject(with: data as Data, options: .mutableContainers)) as! [Any]
+                //print("Teja \(jsonDisctionary)")
+                
+                for i in 0..<1{
+                    
+                    let items = jsonDisctionary[i] as! [String:Any]
+                    let Destination = items["Destination"] as! String
+                    let Source = items["Source"] as! String
+                    let timings = items["Timings"] as! [Any]
+                    
+                    // print(Destination,Source,timings)
+                    
+                    for j in 0..<timings.count{
+                        
+                        let items = timings[j] as! String
+                        //print(items)
+                        
+                        
+                        
+                        let date = Date()
+                        let calendar = Calendar.current
+                        let hour = calendar.component(.hour, from: date) //8
+                        let minute = calendar.component(.minute, from: date) //55
+                        
+                        let myTime = items.components(separatedBy: ":")
+                        let myHour = myTime[0]
+                        let myMinute = myTime[1]
+                        
+                        var a:Bool?
+                        
+                        //print(myHour,myMinute)
+                        
+                        if (Int(myHour) == hour){
+                            
+                            if(Int(myMinute)! > minute){
+                                
+                                print(myHour,myMinute)
+                                pubTrain = myHour + myMinute
+                                
+                            }else{
+                                
+                                a = true
+                                
+                            }
+                            
+                        }
+                        if (Int(myHour) ==  hour + 1){
+                            
+                            if (a == true){
+                                
+                                print(myHour,myMinute)
+                                pubTrain = myHour + myMinute
+                                
+                                
+                            }
+                        }
+                        
+                        
+                    }
+                    
+                }
+                
+                
+                
+            }catch let err{
+                
+                print(err)
+            }
+            
+        }
+        
+        
+        
+    }
+    
+    
+    func cabBus(){
+        
+        distance.text = "Distance  " + privateDistance
+        duration.text = "Duration  " + privateDuration
+        otherDistance.text = "Distance  " + publiceDistance
+        otherDuration.text = "Duration  " + publicDuration
+        
+        nextBestTime.text = "Next Available Cab " + " "
+        otherBestLabel.text = "Next Bus is at    " + pubDeptTime
+        //cab1.isHidden = false
+        //cab2.isHidden = true
+        
+        
+        recomendation.text = "We recomend Taking a Cab"
+        
+        
+    }
+ 
+    func busCab(){
+        
+        otherDistance.text = "Distance  " + privateDistance
+        otherDuration.text = "Duration  " + privateDuration
+        distance.text = "Distance  " + publiceDistance
+        duration.text = "Duration  " + publicDuration
+        
+        recomendation.text = "We recomend Taking a Public Transport"
+        nextBestTime.text = "Nex Available Bus is at     " + pubDeptTime
+        otherBestLabel.text = "Next Available Cab " + ""
+        //cab1.isHidden = true
+        //cab2.isHidden = false
+        
+        
+    }
+    
+    func trainCab(){
+        
+        distance.text = "Distance  "
+        duration.text = "Duration  "
+        otherDistance.text = "Distance  " + privateDistance
+        otherDuration.text = "Duration  " + privateDuration
+        
+        nextBestTime.text = "Next Available Trains " + pubTrain
+        otherBestLabel.text = "Next Cab is at    " + " "
+   
+    
+    }
+    
+    func CabTrain(){
+        
+        distance.text = "Distance  " + privateDistance
+        duration.text = "Duration  " + privateDuration
+        otherDistance.text = "Distance  "
+        otherDuration.text = "Duration  "
+        
+        nextBestTime.text = "Next Available Cab "
+        otherBestLabel.text = "Next Available Trains  " + pubTrain
+        
+    }
+    
+    func TrainBus(){
+        
+        distance.text = "Distance  "
+        duration.text = "Duration  "
+        otherDistance.text = "Distance  " + publiceDistance
+        otherDuration.text = "Duration  " + publicDuration
+        
+        nextBestTime.text = "Next Available Trains " + pubTrain
+        otherBestLabel.text = "Next Available Bus  " + pubDeptTime
+  
+    }
+    
+    func BusTrain(){
+    
+        distance.text = "Distance  " + publiceDistance
+        duration.text = "Duration  " + publicDuration
+        otherDistance.text = "Distance  "
+        otherDuration.text = "Duration  "
+        
+        nextBestTime.text = "Next Available Bus " + pubDeptTime
+        otherBestLabel.text = "Next Available Trains  " + pubTrain
+    
+    }
+
     
 }

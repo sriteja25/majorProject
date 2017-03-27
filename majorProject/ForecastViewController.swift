@@ -12,6 +12,7 @@ class ForecastViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem?.isEnabled = false
 
         viewSetup()
         // Do any additional setup after loading the view.

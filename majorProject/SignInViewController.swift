@@ -20,7 +20,7 @@ class SignInViewController: UIViewController/*,GIDSignInDelegate,GIDSignInUIDele
     @IBOutlet weak var pwdEntered: UITextField!
     @IBOutlet var signInButton: UIButton!
     
-    var ref: FIRDatabaseReference!
+    //var ref: FIRDatabaseReference!
     
     var userId : String = ""
     
@@ -52,7 +52,7 @@ class SignInViewController: UIViewController/*,GIDSignInDelegate,GIDSignInUIDele
         self.emailIDEntered.delegate = self
         self.pwdEntered.delegate = self
         
-       ref = FIRDatabase.database().reference()
+       //ref = FIRDatabase.database().reference()
         
         
         //emailIDEntered.textFieldBorder(textField : emailIDEntered)
@@ -128,7 +128,9 @@ class SignInViewController: UIViewController/*,GIDSignInDelegate,GIDSignInUIDele
     
     func saveInFirebase(){
         
-        self.ref.child("users").child(userId)
+        ref = FIRDatabase.database().reference()
+        
+        ref.child("users").child(userId)
     
     
     }
