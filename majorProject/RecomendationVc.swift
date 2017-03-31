@@ -80,8 +80,11 @@ class RecomendationVc: UIViewController {
         getWeather()
         
         privateTransport()
-        transit()
+        
         getTimings()
+        transit()
+        
+        
         
         
         
@@ -255,7 +258,8 @@ class RecomendationVc: UIViewController {
                     print(self.publicDuration)
                     print(self.publiceDistance)
                     
-                    //self.recomendationForTransport()
+                    self.myValues()
+                    self.myTree()
                     ProgressHUD.dismiss()
                 }
                 
@@ -299,6 +303,7 @@ class RecomendationVc: UIViewController {
         
         }
     
+    
    
 
 
@@ -306,222 +311,7 @@ class RecomendationVc: UIViewController {
         return Float(5.0 / 9.0 * (Double(fahrenheit) - 32.0))
     }
     
-    
-     //Default - 0 , Very humid - 1, Rain - 2, C rain - 3
-    
-   /* func recomendationForTransport(){
-    
-        if (self.fastest == true){
-        
-            if(iconCat == 0){
-                
-                if (peakTime == 0){
-                    
-                    if (cheapest == true){
-                    
-                        recomendedPublic()
-                    
-                    }else{
-                    
-                        recomendedPrivate()
-                    }
-                
-                
-                }else{
-                
-                    if (cheapest == true){
-                        
-                        recomendedPublic() //Train
-                        
-                    }else{
-                       
-                        recomendedPrivate()
-                        
-                    }
-                }
-            
-            
-            }else if(iconCat == 1){
-                if (peakTime == 0){
-                    if (cheapest == true){
-                        
-                        recomendedPublic()
-                    }else{
-                        
-                         recomendedPublic() //Train
-                        
-                    }
-                    
-                }else{
-                    if (cheapest == true){
-                        
-                        recomendedPublic()
-                    }else{
-                        recomendedPrivate()
-                        
-                    }
-                    
-                }
-            
-            
-            }else if(iconCat == 2){
-                if (peakTime == 0){
-                    if (cheapest == true){
-                        
-                        recomendedPrivate()
-                    }else{
-                        recomendedPrivate()
-                        
-                    }
-                    
-                }else{
-                    
-                    if (cheapest == true){
-                        
-                        recomendedPublic()//Train
-                        
-                    }else{
-                        
-                        recomendedPublic()//Train
-                        
-                    }
-                }
-            
-            
-            }else{
-                
-                if (peakTime == 0){
-                    if (cheapest == true){
-                        
-                        recomendedPrivate()
-                        
-                    }else{
-                        
-                        recomendedPrivate()
-                        
-                    }
-                    
-                }else{
-                    if (cheapest == true){
-                        
-                        recomendedPublic() //Train
-                        
-                    }else{
-                        
-                        recomendedPublic() //Train
-                        
-                    }
-                    
-                }
-            
-            
-            }
-            
-        
-        
-        }else{
-        
-            if(iconCat == 0){
-                
-                if (peakTime == 0){
-                    if (cheapest == true){
-                        
-                        recomendedPublic() //Next Train
-                    }else{
-                        
-                        recomendedPublic()
-                    }
-                    
-                }else{
-                    if (cheapest == true){
-                        
-                        recomendedPublic() //Train
-                    }else{
-                        
-                        recomendedPrivate()
-                    }
-                    
-                }
-                
-            }else if(iconCat == 1){
-                if (peakTime == 0){
-                    if (cheapest == true){
-                        
-                        recomendedPublic()
-                        
-                    }else{
-                        
-                        recomendedPrivate()
-                    }
-                    
-                }else{
-                    if (cheapest == true){
-                        
-                        recomendedPublic()
-                        
-                    }else{
-                        
-                        recomendedPrivate()
-                        
-                    }
-                    
-                }
-                
-            }else if(iconCat == 2){
-                if (peakTime == 0){
-                    if (cheapest == true){
-                        
-                        recomendedPrivate()//Wait for a while
-                    }else{
-                        recomendedPrivate()
-                        
-                    }
-                    
-                }else{
-                    
-                    if (cheapest == true){
-                        
-                        recomendedPrivate()
-                        
-                    }else{
-                        
-                        recomendedPrivate()
-                    }
-                }
-                
-            }else{
-                
-                if (peakTime == 0){
-                    
-                    if (cheapest == true){
-                        
-                        recomendedPrivate() //Cheapest
-                        
-                    }else{
-                        
-                        recomendedPrivate() //Fastest
-                    }
-                }else{
-                    
-                    if (cheapest == true){
-                        
-                        recomendedPrivate() //Cheapest
-                        
-                    }else{
-                        
-                        recomendedPrivate() //Fastest
-                    }
-                }
-                
-            }
-        
-        
-        }
-    
-    
-    
-    
-    }*/
+ 
     
     func checkIcon(){
     
@@ -552,7 +342,7 @@ class RecomendationVc: UIViewController {
     
     
     }
-    //Default - 0 , Very humid - 1, Rain - 2, C rain - 3
+    //Default - 0 , Very humid - 1, Rain - 2, Continous rain - 3
     
     
     func peakTimeCheck(){
@@ -578,7 +368,18 @@ class RecomendationVc: UIViewController {
     func getTimings(){
         
         
-        if let path :String = Bundle.main.path(forResource: "test", ofType: "json"){
+        var source = self.origin
+        
+        if source == ("Potheri-Railway-Station"){
+        
+            source = "Potheri"
+        }
+        
+        let destination = self.destination
+        
+        let myPlace = "\(source)To\(destination)"
+        
+        if let path :String = Bundle.main.path(forResource: "\(myPlace)", ofType: "json"){
             
             do{
                 
@@ -622,7 +423,7 @@ class RecomendationVc: UIViewController {
                             if(Int(myMinute)! > minute){
                                 
                                 print(myHour,myMinute)
-                                pubTrain = myHour + myMinute
+                                pubTrain = myHour + ": " + myMinute
                                 
                             }else{
                                 
@@ -660,6 +461,89 @@ class RecomendationVc: UIViewController {
         
     }
     
+    func myValues(){
+    
+       
+        
+        //Time bound
+        if (fastest == true){
+        
+            isTimeBound = true
+        }else{
+        
+            isTimeBound = false
+        }
+        
+        // Climate    Default - 0 , Very humid - 1, Rain - 2, Continous rain - 3
+        if (iconCat == 1){
+        
+            isNormal = true
+            isPleasant = false
+        }else if(iconCat == 2){
+        
+            isNormal = false
+            isPleasant = true
+        
+        }else if(iconCat == 3){
+        
+            isNormal = false
+            isPleasant = false
+            
+        }else{
+        
+            isNormal = true
+            isPleasant = true
+        
+        }
+        
+        // Peak check
+        
+        if (peakTime == 0){
+        
+            isPeak = false
+        }else{
+        
+            isPeak = true
+        }
+        
+        //economical
+        
+        if(cheapest == true){
+        
+            isEconomical = true
+        }else{
+        
+            isEconomical = false
+        }
+        
+        
+        
+    
+    
+    }
+    
+    
+    
+    func myTree(){
+        
+        initialise()
+        
+        
+        let value =  searchMyValue(node:time) as! Int
+        myRecomendation(myvalue : value)
+        
+        
+        print("isTimeBound : \(isTimeBound)")
+        print("isNormal : \(isNormal)")
+        print("isPleasant : \(isPleasant)")
+        print("isPeak : \(isPeak)")
+        print("isEconomical : \(isEconomical)")
+        
+        print(value)
+        
+        
+    }
+    
     
     func cabBus(){
         
@@ -667,6 +551,8 @@ class RecomendationVc: UIViewController {
         duration.text = "Duration  " + privateDuration
         otherDistance.text = "Distance  " + publiceDistance
         otherDuration.text = "Duration  " + publicDuration
+        
+        recomendation.text = "We recomend Taking a Cab"
         
         nextBestTime.text = "Next Available Cab " + " "
         otherBestLabel.text = "Next Bus is at    " + pubDeptTime
@@ -686,7 +572,7 @@ class RecomendationVc: UIViewController {
         distance.text = "Distance  " + publiceDistance
         duration.text = "Duration  " + publicDuration
         
-        recomendation.text = "We recomend Taking a Public Transport"
+        recomendation.text = "We recomend Taking a Bus"
         nextBestTime.text = "Nex Available Bus is at     " + pubDeptTime
         otherBestLabel.text = "Next Available Cab " + ""
         //cab1.isHidden = true
@@ -702,6 +588,8 @@ class RecomendationVc: UIViewController {
         otherDistance.text = "Distance  " + privateDistance
         otherDuration.text = "Duration  " + privateDuration
         
+        recomendation.text = "We recomend Taking a Train"
+        
         nextBestTime.text = "Next Available Trains " + pubTrain
         otherBestLabel.text = "Next Cab is at    " + " "
    
@@ -715,6 +603,8 @@ class RecomendationVc: UIViewController {
         otherDistance.text = "Distance  "
         otherDuration.text = "Duration  "
         
+        recomendation.text = "We recomend Taking a Cab"
+        
         nextBestTime.text = "Next Available Cab "
         otherBestLabel.text = "Next Available Trains  " + pubTrain
         
@@ -726,6 +616,8 @@ class RecomendationVc: UIViewController {
         duration.text = "Duration  "
         otherDistance.text = "Distance  " + publiceDistance
         otherDuration.text = "Duration  " + publicDuration
+        
+        recomendation.text = "We recomend Taking a Train"
         
         nextBestTime.text = "Next Available Trains " + pubTrain
         otherBestLabel.text = "Next Available Bus  " + pubDeptTime
@@ -739,9 +631,42 @@ class RecomendationVc: UIViewController {
         otherDistance.text = "Distance  "
         otherDuration.text = "Duration  "
         
+        recomendation.text = "We recomend Taking a Bus"
+        
         nextBestTime.text = "Next Available Bus " + pubDeptTime
         otherBestLabel.text = "Next Available Trains  " + pubTrain
     
+    }
+    
+    func myRecomendation(myvalue : Int){
+        
+        switch myvalue {
+        case 32,31,30,28,20,24,4:
+            cabBus()
+            break
+        case 19,3:
+            busCab()
+            break
+        case 5,6,1,2,9,10,11,13,14,15:
+            trainCab()
+            break
+            
+        case 8,12,16,22,18,26,29 :
+            CabTrain()
+            break
+            
+        case 7,21,17,25 :
+            TrainBus()
+            break
+        default :
+            BusTrain()
+            break
+        }
+        
+        
+        
+        
+        
     }
 
     
