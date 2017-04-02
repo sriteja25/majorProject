@@ -33,6 +33,38 @@
             endingLineNumber = "58"
             landmarkName = "gettingWeather()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "majorProject.WeatherForecaseViewController.(gettingWeather () -&gt; ()).(closure #1)"
+                  moduleName = "majorProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sriteja/Documents/majorProject/majorProject/WeatherForecaseViewController.swift"
+                  timestampString = "512800733.796694"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "881">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "majorProject.WeatherForecaseViewController.(gettingWeather () -&gt; ()).(closure #1)"
+                  moduleName = "majorProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sriteja/Documents/majorProject/majorProject/WeatherForecaseViewController.swift"
+                  timestampString = "512800733.802144"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "1170">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,7 +90,7 @@
                   moduleName = "majorProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sriteja/Documents/majorProject/majorProject/WeatherForecaseViewController.swift"
-                  timestampString = "512662059.381794"
+                  timestampString = "512800733.810192"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "53"
@@ -73,12 +105,12 @@
                   moduleName = "majorProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sriteja/Documents/majorProject/majorProject/WeatherForecaseViewController.swift"
-                  timestampString = "512662059.385696"
+                  timestampString = "512800733.813728"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "53"
                   endingLineNumber = "53"
-                  offsetFromSymbolStart = "574">
+                  offsetFromSymbolStart = "480">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -106,12 +138,12 @@
                   moduleName = "majorProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sriteja/Documents/majorProject/majorProject/WeatherForecaseViewController.swift"
-                  timestampString = "512662059.389606"
+                  timestampString = "512800733.820695"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "55"
                   endingLineNumber = "55"
-                  offsetFromSymbolStart = "612">
+                  offsetFromSymbolStart = "518">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -121,12 +153,12 @@
                   moduleName = "majorProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sriteja/Documents/majorProject/majorProject/WeatherForecaseViewController.swift"
-                  timestampString = "512662059.391676"
+                  timestampString = "512800733.824726"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "55"
                   endingLineNumber = "55"
-                  offsetFromSymbolStart = "937">
+                  offsetFromSymbolStart = "843">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -138,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "majorProject/RecomendationVc.swift"
-            timestampString = "512628850.792779"
+            timestampString = "512674579.806081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "308"
-            endingLineNumber = "308"
+            startingLineNumber = "310"
+            endingLineNumber = "310"
             landmarkName = "RecomendationVc"
             landmarkType = "3">
          </BreakpointContent>
@@ -154,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "majorProject/RecomendationVc.swift"
-            timestampString = "512628850.792779"
+            timestampString = "512674579.806081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "transit()"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "majorProject/RecomendationVc.swift"
-            timestampString = "512628850.792779"
+            timestampString = "512674579.806081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "242"
-            endingLineNumber = "242"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
             landmarkName = "transit()"
             landmarkType = "7">
          </BreakpointContent>
@@ -218,12 +250,12 @@
                   moduleName = "majorProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sriteja/Documents/majorProject/majorProject/TestViewController.swift"
-                  timestampString = "512662059.408055"
+                  timestampString = "512800733.852798"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "100"
                   endingLineNumber = "100"
-                  offsetFromSymbolStart = "6517">
+                  offsetFromSymbolStart = "6446">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -233,12 +265,12 @@
                   moduleName = "majorProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sriteja/Documents/majorProject/majorProject/TestViewController.swift"
-                  timestampString = "512662059.410147"
+                  timestampString = "512800733.856557"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "100"
                   endingLineNumber = "100"
-                  offsetFromSymbolStart = "6834">
+                  offsetFromSymbolStart = "6763">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -362,11 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "majorProject/RecomendationVc.swift"
-            timestampString = "512628786.01454"
+            timestampString = "512674579.806081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -378,11 +410,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "majorProject/RecomendationVc.swift"
-            timestampString = "512661669.874468"
+            timestampString = "512674579.806081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "373"
-            endingLineNumber = "373"
+            startingLineNumber = "375"
+            endingLineNumber = "375"
             landmarkName = "getTimings()"
             landmarkType = "7">
          </BreakpointContent>

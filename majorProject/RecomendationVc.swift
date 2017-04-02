@@ -31,6 +31,8 @@ class RecomendationVc: UIViewController {
     var publicDuration:String = ""
     var pubDeptTime:String = ""
     var pubTrain:String = ""
+    var trainDuration:String = ""
+    var trainDistance:String = ""
     
     
     
@@ -394,6 +396,11 @@ class RecomendationVc: UIViewController {
                     let items = jsonDisctionary[i] as! [String:Any]
                     let Destination = items["Destination"] as! String
                     let Source = items["Source"] as! String
+                    let duration = items["Duration"] as! String
+                    let distance = items["Distance"] as! String
+                    
+                    self.trainDistance = distance
+                    self.trainDuration = duration
                     let timings = items["Timings"] as! [Any]
                     
                     // print(Destination,Source,timings)
@@ -583,8 +590,8 @@ class RecomendationVc: UIViewController {
     
     func trainCab(){
         
-        distance.text = "Distance  "
-        duration.text = "Duration  "
+        distance.text = "Distance  " + trainDistance
+        duration.text = "Duration  " + trainDuration
         otherDistance.text = "Distance  " + privateDistance
         otherDuration.text = "Duration  " + privateDuration
         
@@ -600,8 +607,8 @@ class RecomendationVc: UIViewController {
         
         distance.text = "Distance  " + privateDistance
         duration.text = "Duration  " + privateDuration
-        otherDistance.text = "Distance  "
-        otherDuration.text = "Duration  "
+        otherDistance.text = "Distance  " + trainDistance
+        otherDuration.text = "Duration  " + trainDuration
         
         recomendation.text = "We recomend Taking a Cab"
         
@@ -612,8 +619,8 @@ class RecomendationVc: UIViewController {
     
     func TrainBus(){
         
-        distance.text = "Distance  "
-        duration.text = "Duration  "
+        distance.text = "Distance  " + trainDistance
+        duration.text = "Duration  " + trainDuration
         otherDistance.text = "Distance  " + publiceDistance
         otherDuration.text = "Duration  " + publicDuration
         
@@ -628,8 +635,8 @@ class RecomendationVc: UIViewController {
     
         distance.text = "Distance  " + publiceDistance
         duration.text = "Duration  " + publicDuration
-        otherDistance.text = "Distance  "
-        otherDuration.text = "Duration  "
+        otherDistance.text = "Distance  " + trainDistance
+        otherDuration.text = "Duration  " + trainDuration
         
         recomendation.text = "We recomend Taking a Bus"
         

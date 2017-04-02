@@ -8,61 +8,103 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>GTMOAuth2.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>MarqueeLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
 		</dict>
 		<key>Pods-majorProject.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>Pods-majorProjectTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 		<key>Pods-majorProjectUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 		<key>ProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>9</integer>
 		</dict>
 		<key>SwiftKeychainWrapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>10</integer>
 		</dict>
 		<key>SwiftLocation.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
+		<key>UberRides.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>13</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1FC197767D199D5D28506E4C2B4BCDC2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2055C0427DECD274498B3BB93CE55CE3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -73,6 +115,11 @@
 			<true/>
 		</dict>
 		<key>363731547560C97B4BDD71E91C36BDAE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>59793ED0DD897ED6921C447FA8003CE2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,7 +149,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>CD6C9FB6B052E1CF663F8A56041EA163</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>DC252669AFF8E1C957D0E8BD17A575B5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E328807D51D4BDEA7356DEE91261B6F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E53CC108585186BB1A86601BA7EB471E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
