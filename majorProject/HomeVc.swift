@@ -84,7 +84,7 @@ class HomeVc: UIViewController,CLLocationManagerDelegate {
     
     func gettingWeather(){
         
-        let weatherUrl = "https://api.darksky.net/forecast/14108162800228d2d692bf8d81f0abcd/\(lat),\(long)"
+        let weatherUrl = "https://api.darksky.net/forecast/14108162800228d2d692bf8d81f0abcd/13.0827,%2080.2707"
         
         Alamofire.request(weatherUrl)
             .responseJSON { response in
