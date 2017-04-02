@@ -25,6 +25,8 @@ class RecomendationVc: UIViewController {
     var humidity:Float = 0
     var peakTime:Float = 0
     
+    var c:Bool = false
+    
     var privateDistance:String = ""
     var privateDuration:String = ""
     var publiceDistance:String = ""
@@ -33,6 +35,7 @@ class RecomendationVc: UIViewController {
     var pubTrain:String = ""
     var trainDuration:String = ""
     var trainDistance:String = ""
+    var pubTrainArray = [String]()
     
     
     
@@ -379,6 +382,12 @@ class RecomendationVc: UIViewController {
         
         let destination = self.destination
         
+        if destination == ("Potheri-Railway-Station"){
+            
+            source = "Potheri"
+        }
+
+        
         let myPlace = "\(source)To\(destination)"
         
         if let path :String = Bundle.main.path(forResource: "\(myPlace)", ofType: "json"){
@@ -427,27 +436,35 @@ class RecomendationVc: UIViewController {
                         
                         if (Int(myHour) == hour){
                             
-                            if(Int(myMinute)! > minute){
-                                
+                                if(Int(myMinute)! > minute )
+                                {
                                 print(myHour,myMinute)
                                 pubTrain = myHour + ": " + myMinute
-                                
-                            }else{
-                                
-                                a = true
-                                
-                            }
+                                pubTrainArray.append(pubTrain)
+                                }
                             
                         }
-                        if (Int(myHour) ==  hour + 1){
+                        if(pubTrainArray.count == 1){
+                        
+                            if(Int(myHour) == (hour+1)){
                             
-                            if (a == true){
-                                
-                                print(myHour,myMinute)
-                                pubTrain = myHour + myMinute
                                 
                                 
+                                if (c == false){
+                                pubTrain = myHour + ": " + myMinute
+                                pubTrainArray.append(pubTrain)
+                                c = true
+                                }
+                            
                             }
+                        }else if(pubTrainArray.count == 0){
+                            
+                            if(Int(myHour) == (hour+1)){
+                            
+                            pubTrain = myHour + ": " + myMinute
+                            pubTrainArray.append(pubTrain)
+                            }
+                        
                         }
                         
                         
@@ -597,7 +614,7 @@ class RecomendationVc: UIViewController {
         
         recomendation.text = "We recomend Taking a Train"
         
-        nextBestTime.text = "Next Available Trains " + pubTrain
+        nextBestTime.text = "Next Available Trains " + pubTrainArray[pubTrainArray.count - 2] + "    " + pubTrainArray[pubTrainArray.count - 1]
         otherBestLabel.text = "Next Cab is at    " + " "
    
     
@@ -613,7 +630,7 @@ class RecomendationVc: UIViewController {
         recomendation.text = "We recomend Taking a Cab"
         
         nextBestTime.text = "Next Available Cab "
-        otherBestLabel.text = "Next Available Trains  " + pubTrain
+        otherBestLabel.text = "Next Available Trains  " + pubTrainArray[pubTrainArray.count - 2] + "    " + pubTrainArray[pubTrainArray.count - 1]
         
     }
     
@@ -626,7 +643,7 @@ class RecomendationVc: UIViewController {
         
         recomendation.text = "We recomend Taking a Train"
         
-        nextBestTime.text = "Next Available Trains " + pubTrain
+        nextBestTime.text = "Next Available Trains " + pubTrainArray[pubTrainArray.count - 2] + "    " + pubTrainArray[pubTrainArray.count - 1]
         otherBestLabel.text = "Next Available Bus  " + pubDeptTime
   
     }
@@ -641,7 +658,7 @@ class RecomendationVc: UIViewController {
         recomendation.text = "We recomend Taking a Bus"
         
         nextBestTime.text = "Next Available Bus " + pubDeptTime
-        otherBestLabel.text = "Next Available Trains  " + pubTrain
+        otherBestLabel.text = "Next Available Trains  " + pubTrainArray[pubTrainArray.count - 2] + "    " + pubTrainArray[pubTrainArray.count - 1]
     
     }
     
